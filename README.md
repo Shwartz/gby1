@@ -13,6 +13,12 @@ Kick off your project with this hello-world boilerplate. This starter ships with
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 ## 🚀 Quick start
+0. **Findings**
+
+    - To add SCSS module support https://www.gatsbyjs.org/packages/gatsby-plugin-sass/
+    - If need specific path, add changes to gatsby-config.js and develop with   
+    `gatsby build --prefix-paths`
+    - gatsby-browser.js - define global css by importing them from `/styles/global.css`
 
 1.  **Create a Gatsby site.**
 
