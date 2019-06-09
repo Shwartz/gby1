@@ -19,6 +19,9 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     - If need specific path, add changes to gatsby-config.js and develop with   
     `gatsby build --prefix-paths`
     - gatsby-browser.js - define global css by importing them from `/styles/global.css`
+    
+    *Demo site*  
+    [http://demo.shvarcs.com/gby1/](http://demo.shvarcs.com/gby1/)
 
 1.  **Create a Gatsby site.**
 
