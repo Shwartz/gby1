@@ -9,6 +9,6 @@ export default () => (
     <Header
       headerText='About page title'
     />
-    <p>Such wow. Very React.</p>
+    <p>Some text for about page</p>
   </Container>
 )

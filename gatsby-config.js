@@ -7,6 +7,9 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: 'Generic Site Title'
+  },
   pathPrefix: `/gby1`,
   plugins: [
     {
