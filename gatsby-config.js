@@ -15,6 +15,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
     },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

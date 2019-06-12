@@ -25,9 +25,13 @@ https://www.gatsbyjs.org/tutorial/part-three/
     - Adding file system reader plugin  
     `npm install --save gatsby-source-filesystem`  
     Then in gatsby-config.js add plugin definition as well
+    - `npm install --save gatsby-transformer-remark` add markdown plugin and update config file
+    - rm -rf -r some_dir -> handy terminal command
     
-    *Demo site*  
-    [http://demo.shvarcs.com/gby1/](http://demo.shvarcs.com/gby1/)  
+    
+    Demo site  
+      
+    `http://demo.shvarcs.com/gby1/`  
 
 1.  **Create a Gatsby site.**
 

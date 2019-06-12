@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import {Container} from "../components/container/Container"
+import {Container} from "../templates/container/Container"
 import { Header } from "../components/Header"
 
 export default ({ data }) => {
-  console.log(data)
+  console.log(data);
+  console.log('data.allFile.edges: ', data.allFile.edges)
   return (
     <Container>
       <p><Link to='/'>Home Link</Link></p>
