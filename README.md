@@ -22,9 +22,12 @@ https://www.gatsbyjs.org/tutorial/part-three/
     - If need specific path, add changes to gatsby-config.js and develop with   
     `gatsby build --prefix-paths`
     - gatsby-browser.js - define global css by importing them from `/styles/global.css`
+    - Adding file system reader plugin  
+    `npm install --save gatsby-source-filesystem`  
+    Then in gatsby-config.js add plugin definition as well
     
     *Demo site*  
-    [http://demo.shvarcs.com/gby1/](http://demo.shvarcs.com/gby1/)
+    [http://demo.shvarcs.com/gby1/](http://demo.shvarcs.com/gby1/)  
 
 1.  **Create a Gatsby site.**
 

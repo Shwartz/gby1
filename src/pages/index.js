@@ -7,7 +7,7 @@ import { Button } from "../components/button/Button"
 export default ({ data }) => {
   return (
     <Container>
-      <p><Link to='/about'>About Link..</Link></p>
+      <p><Link to='/about/'>About Link..</Link></p>
       <Header
         headerText='Home page title'
       />
