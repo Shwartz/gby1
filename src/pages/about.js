@@ -1,13 +1,11 @@
 import React from "react"
-import {Header} from '../components/Header';
-import { Link } from "gatsby"
+import {Header} from '../components/header/Header';
 import { Container } from "../templates/container/Container"
 
 export default () => (
   <Container>
-    <p><Link to='/'>Home Link</Link></p>
     <Header
-      headerText='About page title'
+      headerText='About'
     />
     <p>Some text for about page</p>
   </Container>

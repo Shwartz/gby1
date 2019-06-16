@@ -1,44 +1,30 @@
 import React from "react"
-import { Header } from "../components/Header"
+import { Header } from "../components/header/Header"
 import { Container } from "../templates/container/Container"
-import { Link, graphql } from "gatsby"
-import { Button } from "../components/button/Button"
-
-const linkBox = {
-  background: 'white',
-  border: '1px solid grey',
-  marginTop: '12px',
-  padding: '8px'
-}
+import { graphql } from "gatsby"
 
 export default ({ data }) => {
   return (
     <Container>
-      <p><Link to='/about/'>About Link..</Link></p>
-      <p><Link to='/my-files/'>List of files</Link></p>
       <Header
-        headerText='Home page title'
+        headerText='Welcome'
       />
-      <h4>Meta data from graphQL: {data.site.siteMetadata.title}</h4>
 
-      <Button>Styled component Button</Button>
+      <p>Meta data from graphQL: {data.site.siteMetadata.title}</p>
 
+      <h3>Yar Pirate Ipsum</h3>
 
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div style={linkBox} key={node.id}>
-          <Link
-            to={node.fields.slug}
-          >
-            <h3>
-              {node.frontmatter.title}{" "}
-              <span>
-                  — {node.frontmatter.date}
-                </span>
-            </h3>
-            <p>{node.excerpt}</p>
-          </Link>
-        </div>
-      ))}
+      <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast
+        quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard
+        grog black jack gangway rutters.</p>
+
+      <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a
+        spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry
+        doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.</p>
+
+      <p>Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank
+        crack Jennys tea cup ballast Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven seas boatswain
+        schooner gaff booty Jack Tar transom spirits.</p>
     </Container>
   )
 }
@@ -49,22 +35,6 @@ export const query = graphql`
       siteMetadata {
         title
       }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
+    }   
   }
 `

@@ -26,7 +26,7 @@ https://www.gatsbyjs.org/tutorial/part-three/
     `npm install --save gatsby-source-filesystem`  
     Then in gatsby-config.js add plugin definition as well
     - `npm install --save gatsby-transformer-remark` add markdown plugin and update config file
-    - rm -rf -r some_dir -> handy terminal command
+    - rm -r some_dir -> handy terminal command
     
     
     Demo site  

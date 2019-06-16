@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import {Container} from "../templates/container/Container"
-import { Header } from "../components/Header"
+import { Header } from "../components/header/Header"
 
 export default ({ data }) => {
   console.log(data);

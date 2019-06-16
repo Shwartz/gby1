@@ -1,0 +1,12 @@
+.excerpt {
+  display: block;
+  margin-top: 12px;
+  padding: 8px;
+  border: 1px solid grey;
+  background: white;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 4px 1px grey;
+  }
+}
