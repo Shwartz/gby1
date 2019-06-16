@@ -7,6 +7,7 @@ const mainMenuDefinition = [
   { "Home": "/" },
   { "Blog": "/blog" },
   { "About": "/about" },
+  { "Contact us": "/contact" },
 ]
 
 const mainMenu = (arr) => {
