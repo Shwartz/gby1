@@ -4,8 +4,6 @@ import {Container} from "../templates/container/Container"
 import { Header } from "../components/header/Header"
 
 export default ({ data }) => {
-  console.log(data);
-  console.log('data.allFile.edges: ', data.allFile.edges)
   return (
     <Container>
       <p><Link to='/'>Home Link</Link></p>

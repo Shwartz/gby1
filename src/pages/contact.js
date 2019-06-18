@@ -1,39 +1,44 @@
 import React from "react"
 import { Header } from "../components/header/Header"
 import { Container } from "../templates/container/Container"
-import { AxiosInstance as Axios } from "axios"
+import axios from "axios"
 import firebase from "firebase/app"
-
-const handleSubmit = (event) => {
-  event.preventDefault()
-  console.log("event: ", event)
-  /*const data = {
-    email,
-    message,
-    time: getTime(),
-  }*/
-
-  /*Axios.post("https://us-central1-ourprojectname.cloudfunctions.net/submit", data)
-    .then(res => {
-      if (firebase) {
-        return firebase
-          .database()
-          .ref("contacts")
-          .push(data)
-      }
-    })
-    .catch(error => {
-      console.log(error)
-    })*/
-}
-
-const handleMessageChange = (e) => {
-  console.log("handleMessageChange: ", e)
-}
 
 export default class Contact extends React.Component {
   state = {
-    email: "",
+    email:   "",
+    message: "",
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const formData = new FormData(e.target);
+    let data = {}
+    for(let pair of formData.entries()) {
+      if (pair[0]) {
+        data[pair[0]] = pair[1]
+      }
+    }
+
+    /*const data = {
+      email,
+      message,
+      time: getTime(),
+    }*/
+
+    axios.post("https://us-central1-gby1-ea871.cloudfunctions.net/submit", data)
+      .then(res => {
+        console.log("res: ", res);
+        /*if (firebase) {
+          return firebase
+            .database()
+            .ref("contacts")
+            .push(data)
+        }*/
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
   componentDidMount() {
@@ -41,24 +46,32 @@ export default class Contact extends React.Component {
   }
 
   handleEmailChange = (e) => {
-    this.setState({
-      email: e.target.value,
-    })
+    this.setState(
+      {
+        email: e.target.value,
+      })
+  }
+
+  handleMessageChange = (e) => {
+    this.setState(
+      {
+        message: e.target.value,
+      })
   }
 
   render() {
-    console.log(this)
     const {
             email,
+            message,
           } = this.state
     return (
       <Container>
         <Header
           headerText='Contact us'
         />
-        <h3>Contact form</h3>
+        <h3>Contact form:</h3>
         <form
-          onSubmit={handleSubmit}
+          onSubmit={this.handleSubmit}
         >
           <label>
             e-mail:
@@ -76,8 +89,8 @@ export default class Contact extends React.Component {
             <br/>
             <textarea
               name="message"
-              value="{message}"
-              onChange={handleMessageChange}
+              value={message}
+              onChange={this.handleMessageChange}
             />
           </label>
           <br/>
