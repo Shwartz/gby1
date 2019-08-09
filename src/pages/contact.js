@@ -12,9 +12,9 @@ export default class Contact extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    const formData = new FormData(e.target);
-    let data = {}
-    for(let pair of formData.entries()) {
+    const formData = new FormData(e.target)
+    let data       = {}
+    for (let pair of formData.entries()) {
       if (pair[0]) {
         data[pair[0]] = pair[1]
       }
@@ -28,7 +28,7 @@ export default class Contact extends React.Component {
 
     axios.post("https://us-central1-gby1-ea871.cloudfunctions.net/submit", data)
       .then(res => {
-        console.log("res: ", res);
+        console.log("res: ", res)
         /*if (firebase) {
           return firebase
             .database()
