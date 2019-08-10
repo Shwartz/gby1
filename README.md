@@ -16,6 +16,9 @@ Next topic to cover:
 https://www.gatsbyjs.org/tutorial/part-three/
 
 ## 🚀 Quick start
+**Shortcuts**  
+$ gatsby develop (*to run development*)
+
 0. **Findings**
 
     - To add SCSS module support https://www.gatsbyjs.org/packages/gatsby-plugin-sass/
@@ -27,6 +30,20 @@ https://www.gatsbyjs.org/tutorial/part-three/
     Then in gatsby-config.js add plugin definition as well
     - `npm install --save gatsby-transformer-remark` add markdown plugin and update config file
     - rm -r some_dir -> handy terminal command
+    - To add support for images I use https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image
+    
+    Example:  
+    https://www.freecodecamp.org/news/why-i-believe-gatsby-js-has-javascripts-best-tools-for-image-optimisation-and-how-to-use-them-939c82d05395/  
+    https://www.gatsbyjs.org/docs/using-gatsby-image/    
+    `query MyQuery {
+       allDirectory {
+         edges {
+           node {
+             name
+           }
+         }
+       }
+     }`
     
     
     Demo site  

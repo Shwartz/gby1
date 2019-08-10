@@ -1,14 +1,14 @@
-import React from "react"
-import { Header } from "../components/header/Header"
-import { Container } from "../templates/container/Container"
-import { graphql } from "gatsby"
+import React from "react";
+import { Navigation } from "../components/navigation/Navigation";
+import { Container } from "../templates/container/Container";
+import Img from "gatsby-image";
+import { graphql } from "gatsby";
 
 export default ({ data }) => {
   return (
     <Container>
-      <Header
-        headerText='Welcome'
-      />
+      <Img fixed={data.file.childImageSharp.fixed} />
+      <Navigation />
 
       <p>Meta data from graphQL: {data.site.siteMetadata.title}</p>
 
@@ -34,6 +34,15 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    file(relativePath: { eq: "icons/Logo.png" }) {    
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.    
+        fixed(width: 243, height: 43) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }      
       }
     }   
   }
