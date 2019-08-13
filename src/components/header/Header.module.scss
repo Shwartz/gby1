@@ -1,6 +1,8 @@
 .header {
-  border-bottom: 1px solid salmon;
-  padding-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .menu {
