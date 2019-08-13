@@ -8,8 +8,9 @@ export default ({ data }) => {
   return (
     <Container>
       <Header
-        headerText='Blog'
+        logo={data.imgLogo}
       />
+      <h1>Blog</h1>
       <p>Total amount of articles <b>{data.allMarkdownRemark.totalCount}</b></p>
 
       {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -37,6 +38,15 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    imgLogo: file(relativePath: { eq: "icons/Logo.png" }) {    
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.    
+        fixed(width: 243, height: 43) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }      
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
