@@ -3,6 +3,7 @@ import { Header } from "../components/header/Header"
 import { Container } from "../templates/container/Container"
 import axios from "axios"
 import firebase from "firebase/app"
+import { graphql } from "gatsby"
 
 export default class Contact extends React.Component {
   state = {
@@ -67,9 +68,9 @@ export default class Contact extends React.Component {
     return (
       <Container>
         <Header
-          headerText='Contact us'
+          logo={this.props.data.imgLogo}
         />
-        <h3>Contact form:</h3>
+        <h1>Contact form:</h1>
         <form
           onSubmit={this.handleSubmit}
         >
@@ -104,3 +105,21 @@ export default class Contact extends React.Component {
   }
 };
 
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    imgLogo: file(relativePath: { eq: "icons/Logo.png" }) {    
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.    
+        fixed(width: 243, height: 43) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }      
+      }
+    }   
+  }
+`
