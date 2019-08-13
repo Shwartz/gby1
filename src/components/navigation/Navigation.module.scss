@@ -1,25 +1,36 @@
+@import "../../styles/variables";
+
 .header {
 
 }
 
 .menu {
   display: flex;
+  flex-direction: row;
 
   a {
     display: block;
     margin-right: 4px;
     padding: 4px 8px;
-    border: 1px solid grey;
-    border-radius: 4px;
-    background: yellow;
+    color: white;
     text-decoration: none;
+    transition: color 0.4s ease 0s;
+    font-size: 18px;
 
     &.active {
-      background: lightgreen;
+      color: $fontYellow;
     }
 
     &:hover {
-      background: white;
+      color: $fontYellow;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    justify-content: space-evenly;
+    margin-top: 24px;
+    width: 100%;
   }
 }

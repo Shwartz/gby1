@@ -3,15 +3,20 @@ import PropTypes from "prop-types"
 import { Navigation } from "../navigation/Navigation"
 import Img from "gatsby-image"
 import styles from "./Header.module.scss"
+import { Link } from "gatsby"
 
 export const Header = (props) => {
-  console.log('data header: ', props);
+  console.log("data header: ", props)
   return (
     <div className={styles.header}>
-      <Img
-      fixed={props.logo.childImageSharp.fixed}
-      alt="Migraine Detective"
-    />
+      <Link
+        to="/"
+      >
+        <Img
+          fixed={props.logo.childImageSharp.fixed}
+          alt="Migraine Detective"
+        />
+      </Link>
       <Navigation/>
     </div>
   )

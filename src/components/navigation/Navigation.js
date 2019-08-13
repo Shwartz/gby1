@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import styles from "./Navigation.module.scss"
 
 const mainMenuDefinition = [
-  { "Home": "/" },
   { "About": "/about" },
   { "Blog": "/blog" },
   { "Contact us": "/contact" },
