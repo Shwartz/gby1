@@ -6,7 +6,7 @@ import styles from "./Header.module.scss"
 import { Link } from "gatsby"
 
 export const Header = (props) => {
-  console.log("data header: ", props)
+
   return (
     <div className={styles.header}>
       <Link

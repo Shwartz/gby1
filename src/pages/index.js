@@ -2,15 +2,20 @@ import React from "react"
 import { Container } from "../templates/container/Container"
 import { graphql } from "gatsby"
 import { Header } from "../components/header/Header"
+import { Hero } from "../components/home/hero/Hero"
 
 export default ({ data }) => {
-  console.log("data: ", data)
+  console.log('index data: ', data);
 
   return (
     <Container>
       <Header
         logo={data.imgLogo}
       />
+      <Hero
+        images={data}
+      />
+
       <p>Meta data from graphQL: {data.site.siteMetadata.title}</p>
 
       <h3>Yar Pirate Ipsum</h3>
@@ -44,6 +49,34 @@ export const query = graphql`
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.    
         fixed(width: 243, height: 43) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }      
+      }
+    }
+    imgHero: file(relativePath: { eq: "hero/heroImage.png" }) {    
+      childImageSharp {      
+        fixed(width: 335, height: 657) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }      
+      }
+    }
+    imgSlide1: file(relativePath: { eq: "hero/hero1.png" }) {    
+      childImageSharp {      
+        fixed(width: 271, height: 425) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }      
+      }
+    } 
+    imgSlide2: file(relativePath: { eq: "hero/hero2.png" }) {    
+      childImageSharp {      
+        fixed(width: 271, height: 425) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }      
+      }
+    }
+    imgSlide3: file(relativePath: { eq: "hero/hero3.png" }) {    
+      childImageSharp {   
+        fixed(width: 271, height: 425) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }      
       }

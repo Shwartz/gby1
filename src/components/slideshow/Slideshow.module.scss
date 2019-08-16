@@ -1,0 +1,33 @@
+.phone {
+  position: relative;
+  width: 335px;
+  height: 657px;
+  outline: 1px solid red;
+}
+
+.wrap {
+  position: absolute;
+  width: 271px;
+  height: 425px;
+  top: 140px;
+  left: 32px;
+  overflow: hidden;
+  outline: 1px solid yellow;
+}
+
+.slide {
+  position: absolute;
+  display: block;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.4s ease 0s;
+  outline: #ef0dfa 1px solid;
+
+  &.slideOut {
+    transform: translate3d(-271px, 0, 0);
+    outline: 1px solid #4c09ff;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
