@@ -4,9 +4,9 @@ import Img from "gatsby-image"
 import styles from "./Slideshow.module.scss"
 
 const initialState = {
-  count:        0,
-  animateCount: 0,
-  step:         0,
+  count:       0,
+  imageToShow: 0,
+  step:        1,
 }
 
 export const Slideshow = (props) => {
@@ -20,9 +20,9 @@ export const Slideshow = (props) => {
   )
 
   /*  const [count, setCount]               = useState(0)
-    const [animateCount, setAnimateCount] = useState(0)
+    const [imageToShow, setimageToShow] = useState(0)
     const [step, setStep]                 = useState(0)*/
-  const delay    = 5000
+  const delay    = 3000
   const {
           imgHero,
           imgSlide1,
@@ -38,7 +38,11 @@ export const Slideshow = (props) => {
     )
   })
 
-  const imgCounter = count => count > slideArr.length ? 0 : count
+  useEffect(() => {
+    runSlide()
+  }, [])
+
+  const imgCounter = count => count > (slideArr.length - 1) ? 0 : count
 
   const runSlide = () => {
     setTimeout(() => setState({ step: 1 }), 500)
@@ -49,33 +53,25 @@ export const Slideshow = (props) => {
 
   useInterval(() => {
     // Interval still runs but won't execute method. Interval will stop once component is removed
-    const { count, animateCount } = state
+    const { count } = state
     if (count < 10) {
+      const nextCount       = count + 1
+      const nextImageToShow = nextCount % slideArr.length
+      console.log("--- nextCount, nextImageToShow", nextCount, nextImageToShow)
+
       setState(
         {
-          step:          1,
-          count:         count + 1,
-          animateCount: count % 3,
+          step:        1,
+          count:       nextCount,
+          imageToShow: nextImageToShow,
         },
       )
-
-      console.log("--- count, animatedCount", count, animateCount)
       runSlide()
     }
   }, delay)
 
   const slide1 = (aCounts, step) => {
     console.log("slide1 aCounts - step: ", aCounts, step)
-    /*let dom = ""
-    if (step === 1) {
-      dom = slideArr[imgCounter(aCounts + 1)]
-    }
-    if (step === 2) {
-      dom = slideArr[imgCounter(aCounts + 1)]
-    }
-    if (step === 3 || step === 4) {
-      dom = slideArr[imgCounter(aCounts + 1)]
-    }*/
     return (
       <React.Fragment>
         <div className={`${styles.slide}`}>
@@ -124,7 +120,7 @@ export const Slideshow = (props) => {
   }
 
   const {
-          animateCount,
+          imageToShow,
           step,
         } = state
 
@@ -137,8 +133,8 @@ export const Slideshow = (props) => {
           alt="Migraine Detective"
         />
         <div className={styles.wrap}>
-          {slide1(animateCount, step)}
-          {slide2(animateCount, step)}
+          {slide1(imageToShow, step)}
+          {slide2(imageToShow, step)}
         </div>
       </div>
     </div>
