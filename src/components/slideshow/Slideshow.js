@@ -3,6 +3,11 @@ import { useInterval } from "../../helpers/useInterval"
 import Img from "gatsby-image"
 import styles from "./Slideshow.module.scss"
 
+/**
+ *
+ * @type {{count: number, imageToShow: number, step: number}}
+ * Improvements: Steps should be percentage of delay
+ */
 const initialState = {
   count:       0,
   imageToShow: 0,
@@ -19,9 +24,6 @@ export const Slideshow = (props) => {
     },
   )
 
-  /*  const [count, setCount]               = useState(0)
-    const [imageToShow, setimageToShow] = useState(0)
-    const [step, setStep]                 = useState(0)*/
   const delay    = 3000
   const {
           imgHero,
@@ -45,7 +47,7 @@ export const Slideshow = (props) => {
   const imgCounter = count => count > (slideArr.length - 1) ? 0 : count
 
   const runSlide = () => {
-    setTimeout(() => setState({ step: 1 }), 500)
+    setTimeout(() => setState({ step: 1 }), 600)
     setTimeout(() => setState({ step: 2 }), 900)
     setTimeout(() => setState({ step: 3 }), 1300)
     setTimeout(() => setState({ step: 4 }), 1800)
@@ -57,7 +59,6 @@ export const Slideshow = (props) => {
     if (count < 10) {
       const nextCount       = count + 1
       const nextImageToShow = nextCount % slideArr.length
-      console.log("--- nextCount, nextImageToShow", nextCount, nextImageToShow)
 
       setState(
         {
@@ -70,19 +71,15 @@ export const Slideshow = (props) => {
     }
   }, delay)
 
-  const slide1 = (aCounts, step) => {
-    console.log("slide1 aCounts - step: ", aCounts, step)
+  const slide1 = (aCounts) => {
     return (
-      <React.Fragment>
         <div className={`${styles.slide}`}>
           {slideArr[imgCounter(aCounts + 1)]}
         </div>
-      </React.Fragment>
     )
   }
 
   const slide2 = (aCounts, step) => {
-    console.log("slide2 aCounts - step: ", aCounts, step)
     let dom = ""
     if (step === 1) {
       dom = (
@@ -113,9 +110,7 @@ export const Slideshow = (props) => {
       )
     }
     return (
-      <React.Fragment>
-        {dom}
-      </React.Fragment>
+      dom
     )
   }
 
@@ -125,18 +120,15 @@ export const Slideshow = (props) => {
         } = state
 
   return (
-    <div>
-      <p>slideshow</p>
       <div className={styles.phone}>
         <Img
           fixed={imgHero.childImageSharp.fixed}
           alt="Migraine Detective"
         />
         <div className={styles.wrap}>
-          {slide1(imageToShow, step)}
+          {slide1(imageToShow)}
           {slide2(imageToShow, step)}
         </div>
       </div>
-    </div>
   )
 }

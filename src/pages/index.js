@@ -5,7 +5,6 @@ import { Header } from "../components/header/Header"
 import { Hero } from "../components/home/hero/Hero"
 
 export default ({ data }) => {
-  console.log('index data: ', data);
 
   return (
     <Container>
@@ -62,21 +61,21 @@ export const query = graphql`
     }
     imgSlide1: file(relativePath: { eq: "hero/hero1.png" }) {    
       childImageSharp {      
-        fixed(width: 271, height: 425) {
+        fixed(width: 272, height: 425) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }      
       }
     } 
     imgSlide2: file(relativePath: { eq: "hero/hero2.png" }) {    
       childImageSharp {      
-        fixed(width: 271, height: 425) {
+        fixed(width: 272, height: 425) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }      
       }
     }
     imgSlide3: file(relativePath: { eq: "hero/hero3.png" }) {    
       childImageSharp {   
-        fixed(width: 271, height: 425) {
+        fixed(width: 272, height: 425) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }      
       }
