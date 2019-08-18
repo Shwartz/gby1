@@ -20,3 +20,24 @@
     border: 1px solid transparent;
   }
 }
+
+.blackWhiteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 300px;
+  margin: 64px auto 0;
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 2px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.4s ease 0s, background-color 0.4s ease 0s;
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+}

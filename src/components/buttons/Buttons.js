@@ -19,3 +19,12 @@ export const OpenYourDiaryButton = (props) => (
     <span>{props.children}</span>
   </a>
 )
+
+export const BlackWhiteButton = (props) => (
+  <a
+    className={styles.blackWhiteButton}
+    href={props.href}
+  >
+    <span>{props.children}</span>
+  </a>
+)

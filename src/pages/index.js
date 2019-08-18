@@ -6,13 +6,15 @@ import { Hero } from "../components/home/hero/Hero"
 import { WhyMigraine } from "../components/home/whyMigraine/WhyMigraine"
 
 export default ({ data }) => {
-
+  console.log('data: ', data);
   return (
     <Container>
       <Header
         logo={data.imgLogo}
       />
-      <WhyMigraine/>
+      <WhyMigraine
+        image={data.whyMigraine}
+      />
       <Hero
         images={data}
       />
