@@ -3,13 +3,13 @@ import { Header } from "../components/header/Header"
 import { Container } from "../templates/container/Container"
 import { graphql } from "gatsby"
 
-export default ({data}) => (
+export default ({ data }) => (
   <Container>
     <Header
       logo={data.imgLogo}
     />
     <h1>About</h1>
-    <p>Some text for about page</p>
+    <p>Page in progress</p>
   </Container>
 )
 

@@ -6,7 +6,8 @@ import styles from "./Slideshow.module.scss"
 /**
  *
  * @type {{count: number, imageToShow: number, step: number}}
- * Improvements: Steps should be percentage of delay
+ * TODO Improvements: Steps should be percentage of delay
+ * TODO: add meaningful alt tags for a slide images
  */
 const initialState = {
   count:       0,
@@ -56,7 +57,7 @@ export const Slideshow = (props) => {
   useInterval(() => {
     // Interval still runs but won't execute method. Interval will stop once component is removed
     const { count } = state
-    if (count < 100) {
+    if (count < 16) {
       const nextCount       = count + 1
       const nextImageToShow = nextCount % slideArr.length
 
