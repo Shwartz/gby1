@@ -4,13 +4,16 @@ import { Container } from "../templates/container/Container"
 import { Header } from "../components/header/Header"
 
 export default ({ data }) => {
+  const pageStyle = {
+    color: 'white',
+    margin: '24px auto'
+  }
   return (
     <Container>
-      <p><Link to='/'>Home Link</Link></p>
       <Header
-        headerText='My Files'
+        logo={data.imgLogo}
       />
-      <div>
+      <div style={pageStyle}>
         <table>
           <thead>
           <tr>
@@ -46,6 +49,15 @@ export const query = graphql`
           extension
           birthTime(fromNow: true)
         }
+      }
+    }
+    imgLogo: file(relativePath: { eq: "icons/Logo.png" }) {    
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.    
+        fixed(width: 243, height: 43) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }      
       }
     }
   }
