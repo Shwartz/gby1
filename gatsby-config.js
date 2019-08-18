@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  * https://www.gatsbyjs.org/docs/path-prefix/
  */
+const path = require('path');
 
 module.exports = {
   /* Your site config here */
@@ -22,14 +23,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/md/`
+        path: path.join(__dirname, `src`, `md`)
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static/images/`,
+        path: path.join(__dirname, `static`, `images`),
       },
     },
   ]

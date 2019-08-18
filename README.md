@@ -17,12 +17,13 @@ https://www.gatsbyjs.org/tutorial/part-three/
 
 ## 🚀 Quick start
 **Shortcuts**  
-$ gatsby develop (*to run development*)
+`$ gatsby develop` (*to run development*)
 
 0. **Findings**
 
     - To add SCSS module support https://www.gatsbyjs.org/packages/gatsby-plugin-sass/
-    - If need specific path, add changes to gatsby-config.js and develop with   
+    - If need specific path, add changes to gatsby-config.js and first do  
+    `gatsby clean`    
     `gatsby build --prefix-paths`
     - gatsby-browser.js - define global css by importing them from `/styles/global.css`
     - Adding file system reader plugin  
@@ -31,6 +32,7 @@ $ gatsby develop (*to run development*)
     - `npm install --save gatsby-transformer-remark` add markdown plugin and update config file
     - rm -r some_dir -> handy terminal command
     - To add support for images I use https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image
+    - `gatsby clean` is a very handy before build as it cleans cache 
     
     Example:  
     https://www.freecodecamp.org/news/why-i-believe-gatsby-js-has-javascripts-best-tools-for-image-optimisation-and-how-to-use-them-939c82d05395/  
