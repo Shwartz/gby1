@@ -56,7 +56,7 @@ export const Slideshow = (props) => {
   useInterval(() => {
     // Interval still runs but won't execute method. Interval will stop once component is removed
     const { count } = state
-    if (count < 10) {
+    if (count < 100) {
       const nextCount       = count + 1
       const nextImageToShow = nextCount % slideArr.length
 
