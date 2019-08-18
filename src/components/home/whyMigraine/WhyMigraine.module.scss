@@ -7,14 +7,17 @@
   max-height: 600px;
   background: $greenBg;
   overflow: hidden;
-  outline: 1px solid red;
 
   > div {
     width: 50%;
   }
 
   .image {
+    overflow: hidden;
 
+    > div {
+      min-width: 350px;
+    }
   }
 
   .content {
