@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { Header } from "../components/header/Header"
 import { Hero } from "../components/home/hero/Hero"
 import { WhyMigraine } from "../components/home/whyMigraine/WhyMigraine"
+import { ReadMore } from "../components/home/readMore/ReadMore"
 
 export default ({ data }) => {
   return (
@@ -11,6 +12,7 @@ export default ({ data }) => {
       <Header
         logo={data.imgLogo}
       />
+      <ReadMore/>
       <Hero
         images={data}
       />

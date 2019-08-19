@@ -1,0 +1,28 @@
+@import "../../../styles/variables";
+
+.wrap {
+  background: white;
+
+  section {
+    display: flex;
+    flex-direction: row;
+    max-width: 1024px;
+    margin: auto;
+
+    > div {
+      width: 50%;
+    }
+
+    h3 {
+      font-size: 2em;
+      font-weight: 100;
+      color: $darkBlue;
+    }
+
+    p {
+      max-width: 300px;
+      font-size: 1.2em;
+      line-height: 1.4em;
+    }
+  }
+}
