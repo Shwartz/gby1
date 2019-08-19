@@ -1,6 +1,7 @@
 @import "../../../styles/variables";
 
 .wrap {
+  padding: 0 0 64px;
   background: white;
 
   section {
@@ -8,9 +9,11 @@
     flex-direction: row;
     max-width: 1024px;
     margin: auto;
+    padding-top: 64px;
 
     > div {
       width: 50%;
+      padding-left: 48px;
     }
 
     h3 {
@@ -23,6 +26,68 @@
       max-width: 300px;
       font-size: 1.2em;
       line-height: 1.4em;
+    }
+
+    ul {
+      color: $darkBlue;
+      font-weight: 400;
+      line-height: 2em;
+      font-size: 1.4em;
+    }
+
+    em {
+      position: relative;
+      font-size: 8em;
+      font-weight: 900;
+      color: $darkBlue;
+      font-style: normal;
+    }
+
+    span {
+      position: relative;
+      display: block;
+      height: 3px;
+      background: $fontYellow;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        background: white;
+        right: 0;
+        transition: 1s ease-in-out;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  section:nth-child(1) {
+    em {
+      left: 120px;
+    }
+
+    span {
+      width: 312px;
+
+      &:before {
+        width: 312px;
+      }
+    }
+
+    span.animate:before {
+      transform: translate3d(312px, 0, 0);
+    }
+  }
+
+  section:nth-child(2) {
+    ul {
+      margin-left: 48px;
+    }
+  }
+
+  section:nth-child(3) {
+    em {
+      left: 200px;
     }
   }
 }

@@ -27,7 +27,8 @@
         "nodemailer": "^6.2.1",
         "prop-types": "latest",
         "react": "^16.8.6",
-        "react-dom": "^16.8.6"
+        "react-dom": "^16.8.6",
+        "react-intersection-observer": "^8.24.1"
     },
     "devDependencies": {
         "prettier": "^1.18.0"
