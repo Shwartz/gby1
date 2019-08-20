@@ -1,7 +1,5 @@
 @import "../../../styles/variables";
 
-$border1: 312px;
-
 @mixin animatedBorder($borderWidth) {
   span {
     width: $borderWidth;
@@ -99,5 +97,19 @@ $border1: 312px;
     }
 
     @include animatedBorder(202px);
+  }
+}
+
+@media (max-width: 800px) {
+  .wrap {
+    section {
+      flex-direction: column;
+
+      div {
+        margin: auto;
+        padding: 0 16px;
+        max-width: 400px;
+      }
+    }
   }
 }

@@ -12,13 +12,13 @@ export default ({ data }) => {
       <Header
         logo={data.imgLogo}
       />
-      <ReadMore/>
       <Hero
         images={data}
       />
       <WhyMigraine
         image={data.whyMigraine}
       />
+      <ReadMore/>
     </Container>
   )
 }
