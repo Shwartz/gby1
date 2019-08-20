@@ -6,6 +6,7 @@ import { Hero } from "../components/home/hero/Hero"
 import { WhyMigraine } from "../components/home/whyMigraine/WhyMigraine"
 import ReadMore from "../components/home/readMore/ReadMore"
 import CallToAction from "../components/callToAction/CallToAction"
+import Security from "../components/security/Security"
 
 export default ({ data }) => {
   return (
@@ -21,6 +22,7 @@ export default ({ data }) => {
       />
       <ReadMore/>
       <CallToAction/>
+      <Security/>
     </Container>
   )
 }

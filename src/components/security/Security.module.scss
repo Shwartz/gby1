@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+
+.wrap {
+  background: $greenBgLight;
+  padding: 0 8px 72px;
+
+  div.svg > svg {
+    width: 206px;
+    height: 242px;
+    stroke-width: 0;
+    fill-opacity: 1;
+    stroke: rgb(0, 0, 0);
+    stroke-opacity: 0;
+    fill: rgb(255, 255, 255);
+  }
+
+  div > div > svg {
+    width: 79px;
+    height: 78px;
+    stroke-width: 0;
+    fill-opacity: 1;
+    stroke: rgb(0, 0, 0);
+    stroke-opacity: 0;
+    fill: rgb(212, 210, 0);
+  }
+
+  div.svg {
+    position: relative;
+
+    > div {
+      position: absolute;
+      top: 78px;
+      left: 70px;
+    }
+  }
+}
