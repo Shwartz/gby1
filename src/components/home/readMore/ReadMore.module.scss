@@ -1,5 +1,21 @@
 @import "../../../styles/variables";
 
+$border1: 312px;
+
+@mixin animatedBorder($borderWidth) {
+  span {
+    width: $borderWidth;
+
+    &:before {
+      width: $borderWidth;
+    }
+  }
+
+  span.animate:before {
+    transform: translate3d($borderWidth, 0, 0);
+  }
+}
+
 .wrap {
   padding: 0 0 64px;
   background: white;
@@ -66,28 +82,22 @@
       left: 120px;
     }
 
-    span {
-      width: 312px;
-
-      &:before {
-        width: 312px;
-      }
-    }
-
-    span.animate:before {
-      transform: translate3d(312px, 0, 0);
-    }
+    @include animatedBorder(312px);
   }
 
   section:nth-child(2) {
     ul {
       margin-left: 48px;
     }
+
+    @include animatedBorder(290px);
   }
 
   section:nth-child(3) {
     em {
       left: 200px;
     }
+
+    @include animatedBorder(202px);
   }
 }
