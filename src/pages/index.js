@@ -5,6 +5,7 @@ import { Header } from "../components/header/Header"
 import { Hero } from "../components/home/hero/Hero"
 import { WhyMigraine } from "../components/home/whyMigraine/WhyMigraine"
 import ReadMore from "../components/home/readMore/ReadMore"
+import CallToAction from "../components/callToAction/CallToAction"
 
 export default ({ data }) => {
   return (
@@ -19,6 +20,7 @@ export default ({ data }) => {
         image={data.whyMigraine}
       />
       <ReadMore/>
+      <CallToAction/>
     </Container>
   )
 }

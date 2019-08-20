@@ -10,11 +10,11 @@ export const Buttons = (props) => (
     {props.children}
   </button>
 )
-
-export const OpenYourDiaryButton = (props) => (
+//https://migraine-detective.com/open-diary
+export const WhiteBlueButton = (props) => (
   <a
     className={styles.openYourDiaryButton}
-    href="https://migraine-detective.com/open-diary"
+    href={props.href}
   >
     <span>{props.children}</span>
   </a>
