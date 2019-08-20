@@ -11,6 +11,14 @@ const ReadMore = (props) => {
     <div className={styles.wrap}>
       <section>
         <div>
+          <em>01</em>
+          <ul>
+            <li>Primary or secondary headaches?</li>
+            <li>Writing a headache diary</li>
+            <li>Identifying migraine triggers</li>
+          </ul>
+        </div>
+        <div>
           <h3>Talk to your doctor</h3>
           <span ref={ref1} className={inView1 ? styles.animate : ""}/>
           <p>A certified neurologist will give a proper migraine diagnosis. First of all, she will determine whether you
@@ -18,14 +26,6 @@ const ReadMore = (props) => {
             recommend you writing a headache diary to identify the triggers.</p>
 
           <p><a href="#">What are migraine triggers?</a></p>
-        </div>
-        <div>
-          <em>01</em>
-          <ul>
-            <li>Primary or secondary headaches?</li>
-            <li>Writing a headache diary</li>
-            <li>Identifying migraine triggers</li>
-          </ul>
         </div>
       </section>
       <section>
@@ -49,19 +49,19 @@ const ReadMore = (props) => {
       </section>
       <section>
         <div>
-          <h3>Get meaningful insights</h3>
-          <span ref={ref3} className={inView3 ? styles.animate : ""}/>
-          <p>Identify patterns of events that trigger your migraines with advanced reporting features. Migraine
-            Detective provides you with meaningful data points that you can share with your doctor and support your
-            conversation.​​</p>
-        </div>
-        <div>
           <em>03</em>
           <ul>
             <li>Frequency of migraine episodes</li>
             <li>Details about medication intakes</li>
             <li>Patterns of events triggering migraines</li>
           </ul>
+        </div>
+        <div>
+          <h3>Get meaningful insights</h3>
+          <span ref={ref3} className={inView3 ? styles.animate : ""}/>
+          <p>Identify patterns of events that trigger your migraines with advanced reporting features. Migraine
+            Detective provides you with meaningful data points that you can share with your doctor and support your
+            conversation.​​</p>
         </div>
       </section>
 
