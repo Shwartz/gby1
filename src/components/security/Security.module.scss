@@ -4,8 +4,14 @@
 .wrap {
   position: relative;
   padding: 0 8px 72px;
-  min-height: 208px;
+  min-height: 288px;
   background: $greenBgLight;
+
+  .inner {
+    position: relative;
+    max-width: 1024px;
+    margin: auto;
+  }
 
   h3 {
     padding-top: 48px;
@@ -35,8 +41,8 @@
 
   div.svg {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 90px;
+    left: 50px;
 
     > svg {
       width: 206px;
@@ -67,22 +73,30 @@
 
   .contentWrap {
     position: relative;
+    margin-left: 280px;
     color: $darkBlue;
+
+    .textBox {
+      display: flex;
+      flex-direction: row;
+    }
 
     .left {
       p {
         font-weight: 900;
+        padding-right: 24px;
       }
-    }
-
-    .right {
-
     }
   }
 }
 
 @media (max-width: 800px) {
   .wrap {
+
+    .inner {
+      position: static;
+    }
+
     div.svg {
       position: absolute;
       top: 89px;
@@ -110,12 +124,12 @@
       max-width: 400px;
       margin: auto;
 
-      .left {
+      .textBox {
+        flex-direction: column;
 
-      }
-
-      .right {
-
+        > div {
+          max-width: 100%;
+        }
       }
     }
   }
