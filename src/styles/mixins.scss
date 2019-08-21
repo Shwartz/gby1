@@ -1,0 +1,13 @@
+@mixin animatedBorder($borderWidth) {
+  span {
+    width: $borderWidth;
+
+    &:before {
+      width: $borderWidth;
+    }
+  }
+
+  span.animate:before {
+    width: 0;
+  }
+}

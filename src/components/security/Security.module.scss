@@ -1,11 +1,42 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .wrap {
-  background: $greenBgLight;
+  position: relative;
   padding: 0 8px 72px;
+  min-height: 208px;
+  background: $greenBgLight;
+
+  h3 {
+    padding-top: 48px;
+    font-size: 2em;
+    font-weight: 100;
+    color: $darkBlue;
+  }
+
+  span {
+    position: relative;
+    display: block;
+    height: 3px;
+    background: $fontYellow;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background: $greenBgLight;
+      right: 0;
+      transition: 1s ease-in-out;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @include animatedBorder(312px);
 
   div.svg {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     > svg {
       width: 206px;
@@ -31,6 +62,61 @@
       stroke: rgb(0, 0, 0);
       stroke-opacity: 0;
       fill: rgb(212, 210, 0);
+    }
+  }
+
+  .contentWrap {
+    position: relative;
+    color: $darkBlue;
+
+    .left {
+      p {
+        font-weight: 900;
+      }
+    }
+
+    .right {
+
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .wrap {
+    div.svg {
+      position: absolute;
+      top: 89px;
+      right: 50px;
+      left: auto;
+
+      > svg {
+        width: 103px;
+        height: 121px;
+      }
+
+      > div {
+        position: absolute;
+        top: 39px;
+        left: 35px;
+      }
+
+      > div > svg {
+        width: 38px;
+        height: 39px;
+      }
+    }
+
+    .contentWrap {
+      max-width: 400px;
+      margin: auto;
+
+      .left {
+
+      }
+
+      .right {
+
+      }
     }
   }
 }
