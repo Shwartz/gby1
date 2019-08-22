@@ -3,16 +3,41 @@
   color: white;
 
   .content {
-    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    max-width: 1024px;
     margin: auto;
   }
 
+  .form {
+    outline: 1px solid white;
+    width: 400px;
+  }
+
+  .text {
+    outline: 1px solid salmon;
+    width: 50%;
+  }
+
   h2 {
-    max-width: 500px;
+    max-width: 1024px;
     margin: 48px auto 0;
   }
 
   a {
     color: white;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrap {
+    .content {
+      flex-direction: column;
+      max-width: 500px;
+    }
+
+    h2 {
+      max-width: 500px;
+    }
   }
 }

@@ -7,7 +7,7 @@ const Footer = (props) => {
     <section className={styles.wrap}>
       <h2>Reach out for us</h2>
       <div className={styles.content}>
-        <div>
+        <div className={styles.form}>
           <p>Contact form will be here</p>
           <p>FORM</p>
           <p>FORM</p>
@@ -15,7 +15,7 @@ const Footer = (props) => {
           <p>FORM</p>
           <p>FORM</p>
         </div>
-        <div>
+        <div className={styles.text}>
           <p>We are always looking for your feedback to help us improve. Let us know what you think by reaching out to
             us via the form or drop us a line via <a href="mailto:support@migraine-detective.com?subject=Feedback"
                                                      target="_self" data-content="support@migraine-detective.com"
