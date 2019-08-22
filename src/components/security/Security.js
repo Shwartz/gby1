@@ -32,7 +32,7 @@ const Security = (props) => {
             <div className={styles.left}>
               <p>Your data will always be safe and secure with a bank-grade security and encryption systems.</p>
             </div>
-            <div className={styles.right}>
+            <div>
               <p>The diary data is stored on secure servers controlled by Firebase (Google) as per "Platform as a
                 Service"
                 conditions.</p>
