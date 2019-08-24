@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./ReadMore.module.scss"
 import { useInView } from "react-intersection-observer"
+import { Link } from "gatsby"
 
 const ReadMore = (props) => {
   const [ref1, inView1] = useInView({ threshold: 1 })
@@ -25,7 +26,7 @@ const ReadMore = (props) => {
             have primary or secondary migraines. If you are being diagnosed with chronic migraine or headaches, she may
             recommend you writing a headache diary to identify the triggers.</p>
 
-          <p><a href="#">What are migraine triggers?</a></p>
+          <p><Link to="/blog/what-are-migraine-triggers">What are migraine triggers?</Link></p>
         </div>
       </section>
       <section>
