@@ -17,6 +17,7 @@ https://www.gatsbyjs.org/tutorial/part-three/
 
 ## 🚀 Quick start
 **Shortcuts**  
+Use npm !!!  
 `$ gatsby develop` (*to run development*)
 
 0. **Findings**

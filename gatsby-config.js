@@ -14,12 +14,6 @@ module.exports = {
   pathPrefix: `/gby1`,
   plugins: [
     {
-      resolve: `gatsby-plugin-sass`,
-    },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
@@ -33,5 +27,45 @@ module.exports = {
         path: path.join(__dirname, `static`, `images`),
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sass`,
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+    },
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 400,
+        linkImagesToOriginal: true,
+        sizeByPixelDensity: true,
+        showCaptions: true,
+      },
+    },
+    /*{
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              name: `images`,
+              path: path.join(__dirname, `asdf`, `kdkdk`),
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 400,
+              linkImagesToOriginal: true,
+              sizeByPixelDensity: true,
+              showCaptions: true,
+            },
+          },
+        ],
+      },
+    },*/
   ]
 }
