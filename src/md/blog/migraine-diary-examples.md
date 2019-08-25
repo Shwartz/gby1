@@ -6,16 +6,7 @@ date: "2018-08-24"
 Using Migraine (or a headache) diary can be helpful as you can keep an eye on how often migraines occur. After a while, you might notice some pattern. For example, headaches happened mostly in the morning after you are stressed to wake up late.
 
 The doctor would prescribe you a migraine diary which could look like some of the examples below:
-![Awesome image](paper-diary-example-1.png)
-![Awesome image](./paper-diary-example-1.png)
-![Awesome image](../paper-diary-example-1.png)
-![Awesome image](./static/paper-diary-example-1.png)
-![Awesome image](./static/images/paper-diary-example-1.png)
-![Awesome image](/static/images/paper-diary-example-1.png)
-![Awesome image](../static/images/paper-diary-example-1.png)
-![Awesome image](../../../static/images/paper-diary-example-1.png)
-![Screenshot example of verified commits on Github.](images/paper-diary-example-1.png 'Example of verified commits on Github')
-![Awesome image](/images/paper-diary-example-1.png)
+![alt tag for an Awesome image](../../../static/images/paper-diary-example-1.png 'Title for an image')
 
 There is no problem to use a paper format, of course. However, it is cumbersome to find a pattern or quickly find out how many migraines happened in the last two weeks. Also, paper format diaries create a lot of manual work.
 
