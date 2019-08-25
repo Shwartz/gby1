@@ -4,21 +4,21 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  * https://www.gatsbyjs.org/docs/path-prefix/
  */
-const path = require('path');
+const path = require("path")
 
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Generic Site Title'
+    title: "Generic Site Title",
   },
-  pathPrefix: `/gby1`,
-  plugins: [
+  pathPrefix:   `/gby1`,
+  plugins:      [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: path.join(__dirname, `src`, `md`)
-      }
+        path: path.join(__dirname, `src`, `md`),
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -29,21 +29,20 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-sass`,
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-    },
-    {
-      resolve: `gatsby-remark-images`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        maxWidth: 400,
-        linkImagesToOriginal: true,
-        sizeByPixelDensity: true,
-        showCaptions: true,
+        extensions: [`.mdx`, `.md`],
+        resolve:    `gatsby-remark-images`,
+        options:    {
+          maxWidth:             400,
+          linkImagesToOriginal: true,
+          sizeByPixelDensity:   true,
+          showCaptions:         true,
+        },
       },
-    },
+    }
     /*{
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -67,5 +66,5 @@ module.exports = {
         ],
       },
     },*/
-  ]
+  ],
 }

@@ -11,9 +11,9 @@ export default ({ data }) => {
         logo={data.imgLogo}
       />
       <h1>Blog</h1>
-      <p>Total amount of articles <b>{data.allMarkdownRemark.totalCount}</b></p>
+      <p>Total amount of articles <b>{data.allMdx.totalCount}</b></p>
 
-      {data.allMarkdownRemark.edges.map(({ node }) => (
+      {data.allMdx.edges.map(({ node }) => (
         <div key={node.id}>
           <Link
             to={node.fields.slug}
@@ -49,7 +49,7 @@ export const query = graphql`
         }      
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {

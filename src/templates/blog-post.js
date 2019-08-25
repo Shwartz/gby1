@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import {MDXRenderer} from 'gatsby-plugin-mdx'
 import { Container } from "./container/Container"
 import { Header } from "../components/header/Header"
 import styles from "./blogPost.module.scss"
 import Footer from "../components/footer/Footer"
 
 export default ({ data }) => {
-  const post = data.markdownRemark
-  console.log("data: ", data)
+  const post = data.mdx
   return (
     <Container>
       <Header
@@ -25,7 +25,7 @@ export default ({ data }) => {
             </Link>&nbsp;/&nbsp;<span>{post.frontmatter.title}</span>
           </div>
           <h1>{post.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.html }}/>
+          <MDXRenderer>{post.body}</MDXRenderer>
         </div>
       </section>
       <Footer/>
@@ -35,8 +35,8 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
       }
