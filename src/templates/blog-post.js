@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import {MDXRenderer} from 'gatsby-plugin-mdx'
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Container } from "./container/Container"
 import { Header } from "../components/header/Header"
 import styles from "./blogPost.module.scss"
@@ -35,11 +35,11 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
-      body
+    mdx(fields: { slug: { eq: $slug } }) {     
       frontmatter {
         title
       }
+      body  
     }
     imgLogo: file(relativePath: { eq: "icons/Logo.png" }) {    
       childImageSharp {
