@@ -12,7 +12,7 @@ const path = require("path")
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Generic Site Title",
+    title: "Migraine Detective",
   },
   pathPrefix:   `/gby1`,
   plugins:      [
@@ -48,13 +48,16 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 400,
+              maxWidth: 500,
             },
           },
         ],
       },
     },
-    /*{
+  ],
+}
+
+/*{
       resolve: `gatsby-transformer-remark`,
       options: {
         gatsbyRemarkPlugins: [
@@ -77,5 +80,3 @@ module.exports = {
         ],
       },
     },*/
-  ],
-}
