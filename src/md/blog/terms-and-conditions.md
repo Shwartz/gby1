@@ -1,6 +1,6 @@
 ---
 title: "Terms and Conditions"
-date: "2018-08-26"
+date: "2018-06-26"
 ---
 
 By using Google Sign-up you agree to [Google Terms of Service](https://www.google.co.uk/intl/en/policies/terms/regional.html) and [Privacy Policy](https://www.google.co.uk/intl/en/policies/privacy/). If not sure here is [Google Help](https://support.google.com/accounts?hl=en#topic=3382296) for more information.
