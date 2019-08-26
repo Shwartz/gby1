@@ -1,6 +1,7 @@
 import React from "react"
 import { Container } from "../templates/container/Container"
 import { graphql } from "gatsby"
+import "typeface-roboto"
 import { Header } from "../components/header/Header"
 import { Hero } from "../components/home/hero/Hero"
 import { WhyMigraine } from "../components/home/whyMigraine/WhyMigraine"

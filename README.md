@@ -34,6 +34,7 @@ Use npm !!!
     - rm -r some_dir -> handy terminal command
     - To add support for images I use https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image
     - `gatsby clean` is a very handy before build as it cleans cache 
+    - Fonts: https://github.com/KyleAMathews/typefaces  
     
     Example:  
     https://www.freecodecamp.org/news/why-i-believe-gatsby-js-has-javascripts-best-tools-for-image-optimisation-and-how-to-use-them-939c82d05395/  
