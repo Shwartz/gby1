@@ -1,5 +1,6 @@
 import React from "react"
 import styles from "./Footer.module.scss"
+import { Link } from "gatsby"
 
 const Footer = (props) => {
 
@@ -30,8 +31,9 @@ const Footer = (props) => {
         </div>
       </div>
       <p>Copyright &copy; Migraine Detective 2018 - 2019.</p>
-      <p>By using Migraine Detective you agree to our <a href="#">Terms and Conditions</a>. To find out how we are using and protecting
-        your personal data, see our <a href="#">Privacy Policy</a> page.</p>
+      <p>By using Migraine Detective you agree to our <Link to="/blog/terms-and-conditions">Terms and Conditions</Link>. To find out how we are using and protecting
+        your personal data, see our <Link to="/blog/privacy-policy">Privacy Policy</Link> page.</p>
+
     </section>
   )
 }
