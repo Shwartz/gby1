@@ -3,6 +3,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  * https://www.gatsbyjs.org/docs/path-prefix/
+ *
+ * Issues with Gatsby markdown images:
+ * https://github.com/gatsbyjs/gatsby/issues/15486
  */
 const path = require("path")
 
@@ -13,6 +16,11 @@ module.exports = {
   },
   pathPrefix:   `/gby1`,
   plugins:      [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,16 +35,12 @@ module.exports = {
         path: path.join(__dirname, `static`, `images`),
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-      }
+      },
     },
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
