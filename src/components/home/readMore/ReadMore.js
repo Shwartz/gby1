@@ -45,7 +45,8 @@ const ReadMore = (props) => {
             you add to the diary, the better chances are that you will be able to identify patterns that trigger your
             migraine episodes.</p>
 
-          <p><a href="#">View migraine diary examples</a></p>
+          <p><Link to="/blog/migraine-diary-examples">View migraine diary examples</Link>
+          </p>
         </div>
       </section>
       <section>
