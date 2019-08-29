@@ -54,29 +54,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Migraine Detective a digital headache diary`,
+        short_name: `Migraine Detective`,
+        start_url: `/`,
+        icon: `./static/favicon.png`,
+        background_color: `#40c7c0`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+      },
+    },
   ],
 }
-
-/*{
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-              name: `images`,
-              path: path.join(__dirname, `asdf`, `kdkdk`),
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 400,
-              linkImagesToOriginal: true,
-              sizeByPixelDensity: true,
-              showCaptions: true,
-            },
-          },
-        ],
-      },
-    },*/
