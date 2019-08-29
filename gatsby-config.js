@@ -59,7 +59,7 @@ module.exports = {
       options: {
         name: `Migraine Detective a digital headache diary`,
         short_name: `Migraine Detective`,
-        start_url: `/`,
+        start_url: `/gby1`,
         icon: `./static/favicon.png`,
         background_color: `#40c7c0`,
         theme_color: `#ffffff`,
