@@ -2,7 +2,7 @@ import React from "react"
 import { Header } from "../components/header/Header"
 import { Container } from "../templates/container/Container"
 import { Link, graphql } from "gatsby"
-import styles from "./blog.module.scss"
+import styles from "../styles/global.module.scss"
 
 export default ({ data }) => {
   return (
@@ -10,25 +10,29 @@ export default ({ data }) => {
       <Header
         logo={data.imgLogo}
       />
-      <h1>Blog</h1>
-      <p>Total amount of articles <b>{data.allMdx.totalCount}</b></p>
+      <section className={styles.page}>
+        <div className={styles.textWrap}>
+          <h1>Blog</h1>
+          <p>Total amount of articles <b>{data.allMdx.totalCount}</b></p>
 
-      {data.allMdx.edges.map(({ node }) => (
-        <div key={node.id}>
-          <Link
-            to={node.fields.slug}
-            className={styles.excerpt}
-          >
-            <h3>
-              {node.frontmatter.title}{" "}
-              <span>
+          {data.allMdx.edges.map(({ node }) => (
+            <div key={node.id}>
+              <Link
+                to={node.fields.slug}
+                className={styles.excerpt}
+              >
+                <h3>
+                  {node.frontmatter.title}{" "}
+                  <span>
                   — {node.frontmatter.date}
                 </span>
-            </h3>
-            <p>{node.excerpt}</p>
-          </Link>
+                </h3>
+                <p>{node.excerpt}</p>
+              </Link>
+            </div>
+          ))}
         </div>
-      ))}
+      </section>
     </Container>
   )
 }

@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Container } from "./container/Container"
 import { Header } from "../components/header/Header"
-import styles from "./blogPost.module.scss"
+import styles from "../styles/global.module.scss"
 import Footer from "../components/footer/Footer"
 
 export default ({ data }) => {
@@ -13,8 +13,8 @@ export default ({ data }) => {
       <Header
         logo={data.imgLogo}
       />
-      <section className={styles.blogContainer}>
-        <div className={styles.wrap}>
+      <section className={styles.page}>
+        <div className={styles.textWrap}>
           <div className={styles.breadcrumb}>
             <Link to='/'>
               Home

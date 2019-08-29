@@ -4,6 +4,8 @@ import { Container } from "../templates/container/Container"
 import axios from "axios"
 import firebase from "firebase/app"
 import { graphql } from "gatsby"
+import styles from "../styles/global.module.scss"
+import Footer from "../components/footer/Footer"
 
 export default class Contact extends React.Component {
   state = {
@@ -70,36 +72,41 @@ export default class Contact extends React.Component {
         <Header
           logo={this.props.data.imgLogo}
         />
-        <h1>Contact form:</h1>
-        <form
-          onSubmit={this.handleSubmit}
-        >
-          <label>
-            e-mail:
-            <br/>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleEmailChange}
-            />
-          </label>
-          <br/>
-          <label>
-            Message
-            <br/>
-            <textarea
-              name="message"
-              value={message}
-              onChange={this.handleMessageChange}
-            />
-          </label>
-          <br/>
-          <input
-            type="submit"
-            value="submit"
-          />
-        </form>
+        <section className={styles.page}>
+          <div className={styles.textWrap}>
+            <h1>Contact form:</h1>
+            <form
+              onSubmit={this.handleSubmit}
+            >
+              <label>
+                e-mail:
+                <br/>
+                <input
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={this.handleEmailChange}
+                />
+              </label>
+              <br/>
+              <label>
+                Message
+                <br/>
+                <textarea
+                  name="message"
+                  value={message}
+                  onChange={this.handleMessageChange}
+                />
+              </label>
+              <br/>
+              <input
+                type="submit"
+                value="submit"
+              />
+            </form>
+          </div>
+        </section>
+        <Footer/>
       </Container>
     )
   }
