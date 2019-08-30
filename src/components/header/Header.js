@@ -8,17 +8,19 @@ import { Link } from "gatsby"
 export const Header = (props) => {
 
   return (
-    <div className={styles.header}>
-      <Link
-        to="/"
-      >
-        <Img
-          fixed={props.logo.childImageSharp.fixed}
-          alt="Migraine Detective"
-        />
-      </Link>
-      <Navigation/>
-    </div>
+    <section className={styles.header}>
+      <div className={styles.headerWrap}>
+        <Link
+          to="/"
+        >
+          <Img
+            fixed={props.logo.childImageSharp.fixed}
+            alt="Migraine Detective"
+          />
+        </Link>
+        <Navigation/>
+      </div>
+    </section>
   )
 }
 

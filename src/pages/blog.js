@@ -3,6 +3,7 @@ import { Header } from "../components/header/Header"
 import { Container } from "../templates/container/Container"
 import { Link, graphql } from "gatsby"
 import styles from "../styles/global.module.scss"
+import Footer from "../components/footer/Footer"
 
 export default ({ data }) => {
   return (
@@ -33,6 +34,7 @@ export default ({ data }) => {
           ))}
         </div>
       </section>
+      <Footer/>
     </Container>
   )
 }

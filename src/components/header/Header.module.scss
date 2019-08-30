@@ -1,6 +1,10 @@
 @import "../../styles/variables";
 
 .header {
+  background: $darkBlue;
+}
+
+.headerWrap {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -8,7 +12,6 @@
   margin: 0 auto;
   padding: 8px 16px 16px;
   max-width: 1024px;
-  background: $darkBlue;
 }
 
 .menu {
