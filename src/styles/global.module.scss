@@ -1,10 +1,11 @@
 @import "./variables.scss";
 
 body {
-    background: $darkBlue;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+  background: $darkBlue;
+  color: $darkBlue;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .page {
@@ -12,10 +13,10 @@ body {
 }
 
 .textWrap {
-    max-width: 800px;
-    margin: auto;
-    padding: 0 16px 40px;
-    color: #0B1C4D;
+  max-width: 800px;
+  margin: auto;
+  padding: 0 16px 40px;
+  color: #0B1C4D;
 }
 
 .breadcrumb {
