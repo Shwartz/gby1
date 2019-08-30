@@ -6,12 +6,14 @@ const CallToAction = (props) => {
 
   return (
     <section className={styles.wrap}>
-      <h3>Start writing your migraine diary now</h3>
-      <WhiteBlueButton
-        href="https://migraine-detective.com/open-diary"
-      >
-        Open your diary
-      </WhiteBlueButton>
+      <div className={styles.content}>
+        <h3>Start writing your migraine diary now</h3>
+        <WhiteBlueButton
+          href="https://migraine-detective.com/open-diary"
+        >
+          Open your diary
+        </WhiteBlueButton>
+      </div>
     </section>
   )
 }

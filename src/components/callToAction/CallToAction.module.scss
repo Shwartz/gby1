@@ -1,8 +1,12 @@
 @import "../../styles/variables";
 
 .wrap {
-  padding: 0 8px 72px;
+  padding: 8px 8px 72px;
   background: $darkBlue;
+
+  .content {
+
+  }
 
   h3 {
     max-width: 496px;

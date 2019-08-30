@@ -1,7 +1,13 @@
+@import "../../../styles/variables";
+
 .hero {
-  max-width: 528px;
-  margin: 36px auto 0;
-  color: white;
+  background: $darkBlue;
+
+  .heroWrap {
+    max-width: 528px;
+    margin: 0 auto 0;
+    color: white;
+  }
 
   h1 {
     padding: 0;
