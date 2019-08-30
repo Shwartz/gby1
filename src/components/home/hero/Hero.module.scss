@@ -17,3 +17,9 @@
     font-weight: 600;
   }
 }
+
+@media (max-width: 640px) {
+  .hero {
+    margin-bottom: -300px;
+  }
+}
