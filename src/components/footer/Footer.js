@@ -16,7 +16,7 @@ const Footer = (props) => {
         </div>
         <div className={styles.text}>
           <p>We are always looking for your feedback to help us improve. Let us know what you think by reaching out to
-            us via the form or drop us a line via <a href="mailto:support@migraine-detective.com?subject=Feedback"
+            us via the form or drop us a line via <br/> <a href="mailto:support@migraine-detective.com?subject=Feedback"
                                                      target="_self" data-content="support@migraine-detective.com"
                                                      data-type="mail">support@migraine-detective.com</a></p>
           <h3>Social</h3>

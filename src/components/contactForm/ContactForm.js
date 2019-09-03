@@ -1,11 +1,10 @@
 import React from "react"
 import styles from "./ContactForm.module.scss"
+import {InputWhiteBlueButton} from "../buttons/Buttons"
 
 const ContactForm = (props) => {
-  // expect theme: light | dark
+  // expected props theme: light | dark
   const theme = props.theme === 'light' ? styles.light : '';
-  console.log('theme: ', theme);
-
 
   return (
     <div className={`${styles.wrap} ${theme}`}>
@@ -27,8 +26,7 @@ const ContactForm = (props) => {
         />
         </label>
         <label>
-          <input
-            type="submit"
+          <InputWhiteBlueButton
             value="Send"
           />
         </label>

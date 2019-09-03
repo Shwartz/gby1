@@ -28,3 +28,11 @@ export const BlackWhiteButton = (props) => (
     <span>{props.children}</span>
   </a>
 )
+
+export const InputWhiteBlueButton = (props) => (
+  <input
+    className={styles.InputWhiteBlueButton}
+    type="submit"
+    value={props.value}
+  />
+)
