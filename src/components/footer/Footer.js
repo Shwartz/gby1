@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./Footer.module.scss"
 import { Link } from "gatsby"
+import ContactForm from "../contactForm/ContactForm"
 
 const Footer = (props) => {
 
@@ -9,12 +10,9 @@ const Footer = (props) => {
       <h2>Reach out for us</h2>
       <div className={styles.content}>
         <div className={styles.form}>
-          <p>Contact form will be here</p>
-          <p>FORM</p>
-          <p>FORM</p>
-          <p>FORM</p>
-          <p>FORM</p>
-          <p>FORM</p>
+          <ContactForm
+            theme="light"
+          />
         </div>
         <div className={styles.text}>
           <p>We are always looking for your feedback to help us improve. Let us know what you think by reaching out to

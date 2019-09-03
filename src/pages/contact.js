@@ -17,7 +17,7 @@ export default class Contact extends React.Component {
         <section className={styles.page}>
           <div className={styles.textWrap}>
             <ContactForm
-              theme="light"
+              theme="dark"
             />
           </div>
         </section>

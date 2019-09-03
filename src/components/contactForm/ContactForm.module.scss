@@ -3,7 +3,7 @@
 .wrap {
   width: 100%;
   max-width: 400px;
-  margin: 48px auto;
+  margin: 16px auto;
 
   label {
     display: block;
@@ -29,8 +29,7 @@
 
   &.light {
     input, textarea {
-      color: white;
-      border: 1px solid red;
+      border: 1px solid $darkBlue;
     }
   }
 }

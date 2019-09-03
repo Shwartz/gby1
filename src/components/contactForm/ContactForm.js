@@ -1,9 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import styles from "./ContactForm.module.scss"
 
 const ContactForm = (props) => {
   // expect theme: light | dark
-  const theme = props.theme === 'dark' ? styles.light : '';
+  const theme = props.theme === 'light' ? styles.light : '';
   console.log('theme: ', theme);
 
 
