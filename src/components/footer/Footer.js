@@ -7,6 +7,7 @@ const Footer = (props) => {
 
   return (
     <section className={styles.wrap}>
+      <div id="fb-root"/>
       <h2>Reach out for us</h2>
       <div className={styles.content}>
         <div className={styles.form}>
@@ -24,7 +25,8 @@ const Footer = (props) => {
             TWITTER
           </div>
           <div className={styles.facebook}>
-            FACEBOOK
+            <div className="fb-like" data-href="https://migraine-detective.com" data-width="" data-layout="button_count"
+                 data-action="like" data-size="small" data-show-faces="true" data-share="true"/>
           </div>
         </div>
       </div>
