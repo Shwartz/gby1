@@ -34,6 +34,11 @@
   a {
     color: white;
   }
+
+  .footNote {
+    max-width: 1024px;
+    margin: auto;
+  }
 }
 
 @media (max-width: 800px) {
@@ -59,6 +64,10 @@
       max-width: 100%;
       width: 100%;
       margin-top: 24px;
+    }
+
+    .footNote {
+      max-width: 500px;
     }
   }
 }

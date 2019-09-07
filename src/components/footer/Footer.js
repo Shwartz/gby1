@@ -28,10 +28,11 @@ const Footer = (props) => {
           </div>
         </div>
       </div>
-      <p>Copyright &copy; Migraine Detective 2018 - 2019.</p>
-      <p>By using Migraine Detective you agree to our <Link to="/blog/terms-and-conditions">Terms and Conditions</Link>. To find out how we are using and protecting
-        your personal data, see our <Link to="/blog/privacy-policy">Privacy Policy</Link> page.</p>
-
+      <div className={styles.footNote}>
+        <p>Copyright &copy; Migraine Detective 2018 - 2019.</p>
+        <p>By using Migraine Detective you agree to our <Link to="/blog/terms-and-conditions">Terms and Conditions</Link>. To find out how we are using and protecting
+          your personal data, see our <Link to="/blog/privacy-policy">Privacy Policy</Link> page.</p>
+      </div>
     </section>
   )
 }
