@@ -6,6 +6,11 @@
   background: white;
   text-align: center;
 
+  .content {
+    max-width: 1024px;
+    margin: auto;
+  }
+
   section {
     /*display: flex;
     flex-direction: row;*/
