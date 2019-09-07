@@ -1,6 +1,7 @@
 import React from "react"
 import { Container } from "../templates/container/Container"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import "typeface-roboto"
 import { Header } from "../components/header/Header"
 import { Hero } from "../components/home/hero/Hero"
@@ -13,6 +14,16 @@ import Footer from "../components/footer/Footer"
 export default ({ data }) => {
   return (
     <Container>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Migraine Detective | Digital headache diary</title>
+        <link rel="canonical" href="https://migraine-detective.com" />
+        <meta property="og:url"           content="https://migraine-detective.com" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="Migraine Detective" />
+        <meta property="og:description"   content="Migraine Detective is a digital headache diary that helps to find your migraine triggers." />
+        <meta property="og:image"         content="./images/icons/Logo.png" />
+      </Helmet>
       <Header
         logo={data.imgLogo}
       />
