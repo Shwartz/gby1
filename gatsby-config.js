@@ -13,6 +13,8 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Migraine Detective",
+    twitterHandle: '@migdetective',
+    url: 'https://migraine-detective.com',
   },
   pathPrefix:   `/gby1`,
   plugins:      [

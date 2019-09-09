@@ -2,8 +2,12 @@ import React from "react"
 import styles from "./Footer.module.scss"
 import { Link } from "gatsby"
 import ContactForm from "../contactForm/ContactForm"
+import Share from "../share/Share"
 
 const Footer = (props) => {
+  const twitterHandle = "@migdetective"
+  const title = "this is title"
+
   return (
     <section className={styles.wrap}>
       <h2>Reach out for us</h2>
@@ -19,6 +23,18 @@ const Footer = (props) => {
                                                            target="_self" data-content="support@migraine-detective.com"
                                                            data-type="mail">support@migraine-detective.com</a></p>
           <h3>Social</h3>
+
+          <Share
+            socialConfig={{
+              twitterHandle,
+              config: {
+                url: `https://migraine-detective.com`,
+                title,
+              },
+            }}
+            tags={["social"]}
+          />
+
           <div className={styles.twitter}>
             TWITTER
           </div>
