@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { Container } from "../templates/container/Container"
 import { Header } from "../components/header/Header"
+import { HeaderMetaData } from "../helpers/HeaderMetaData"
 
 export default ({ data }) => {
   const pageStyle = {
@@ -10,6 +11,11 @@ export default ({ data }) => {
   }
   return (
     <Container>
+      <HeaderMetaData
+        title="Migraine Detective | Digital headache diary"
+        description="Migraine Detective is a digital headache diary that helps to find your migraine triggers."
+        link="https://migraine-detective.com"
+      />
       <Header
         logo={data.imgLogo}
       />

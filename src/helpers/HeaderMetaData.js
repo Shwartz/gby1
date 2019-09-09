@@ -2,7 +2,6 @@ import React from "react"
 import { Helmet } from "react-helmet"
 
 export const HeaderMetaData = ({title, description, link}) => {
-  console.log(title, description, link);
   return (
     <Helmet>
       <meta charSet="utf-8" />
@@ -14,8 +13,6 @@ export const HeaderMetaData = ({title, description, link}) => {
       <meta property="og:description"   content={description} />
       <meta property="og:image"         content="./images/icons/Logo.png" />
       <meta name="description" content={description} />
-      <script async defer crossOrigin="anonymous"
-              src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"/>
     </Helmet>
   )
 }

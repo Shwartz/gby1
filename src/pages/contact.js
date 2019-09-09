@@ -5,12 +5,18 @@ import { graphql } from "gatsby"
 import styles from "../styles/global.module.scss"
 import Footer from "../components/footer/Footer"
 import ContactForm from "../components/contactForm/ContactForm"
+import { HeaderMetaData } from "../helpers/HeaderMetaData"
 
 export default class Contact extends React.Component {
 
   render() {
     return (
       <Container>
+        <HeaderMetaData
+          title="Migraine Detective | Digital headache diary"
+          description="Migraine Detective is a digital headache diary that helps to find your migraine triggers."
+          link="https://migraine-detective.com"
+        />
         <Header
           logo={this.props.data.imgLogo}
         />

@@ -36,6 +36,7 @@
         "react-dom": "^16.8.6",
         "react-helmet": "^5.2.1",
         "react-intersection-observer": "^8.24.1",
+        "react-share": "^3.0.1",
         "typeface-roboto": "0.0.75"
     },
     "devDependencies": {
