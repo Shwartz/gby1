@@ -27,9 +27,9 @@ const Share = ({ socialConfig, tags }) => {
 
   return (
     <div className="post-social">
-      <hr/>
       <FacebookShareButton url="https://migraine-detective.com">
         <FacebookIcon size={32} round={true}/>
+        <div className="SocialMediaShareTitle">Facebook</div>
         {fbShareCount}
       </FacebookShareButton>
 
@@ -40,33 +40,8 @@ const Share = ({ socialConfig, tags }) => {
         hashtags={['migraine', 'diary', 'headache']}
       >
         <TwitterIcon size={32} round={true}/>
+        <div className="SocialMediaShareTitle">Twitter</div>
       </TwitterShareButton>
-
-      <hr/>
-
-      {/*<FacebookShareButton url={socialConfig.config.url} className="button is-outlined is-rounded facebook" >
-        <span className="icon">
-          <FontAwesomeIcon icon={faFacebookF} />
-        </span>
-        <span className="text">Facebook</span>
-        <FacebookShareCount url={socialConfig.config.url}>
-          {shareCount => (
-            <span className="myShareCountWrapper">{shareCount}</span>
-          )}
-        </FacebookShareCount>
-      </FacebookShareButton>*/}
-      {/*<TwitterShareButton url={socialConfig.config.url} className="button is-outlined is-rounded twitter" title={socialConfig.config.title} via={socialConfig.twitterHandle.split('@').join('')} hashtags={tags} >
-        <span className="icon">
-          <FontAwesomeIcon icon={['fab', 'twitter']} />
-        </span>
-        <span className="text">Twitter</span>
-      </TwitterShareButton>*/}
-      {/*<LinkedinShareButton url={socialConfig.config.url} className="button is-outlined is-rounded linkedin" title={socialConfig.config.title} >
-			<span className="icon">
-				<FontAwesomeIcon icon={['fab', 'linkedin-in']} />
-			</span>
-      <span className="text">LinkedIn</span>
-    </LinkedinShareButton>*/}
     </div>
   )
 }

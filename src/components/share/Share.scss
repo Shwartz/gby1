@@ -1,24 +1,44 @@
 $brand-colors: (
   facebook: #3b5998,
-  twitter: #1da1f2,
+  twitter: #05aced,
   linkedin: #0077b5,
 );
 
 .post-social {
-    margin: 0.5rem 0.25rem;
+  display: flex;
+  margin: 16px 0 0;
 
-    @each $class, $color in $brand-colors {
-      .SocialMediaShareButton--#{$class} {
-        transition: all 300ms ease-out;
-        color: $color;
+  .SocialMediaShareButton {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    border: 1px solid white;
+    border-radius: 22px;
+    cursor: pointer;
+
+    > div {
+      margin-right: 8px;
+    }
+  }
+
+  @each $class, $color in $brand-colors {
+    .SocialMediaShareButton--#{$class} {
+      transition: all 300ms ease-out;
+      color: $color;
+      border-color: $color;
+
+      &:hover {
+        background-color: $color;
         border-color: $color;
-
-        &:hover {
-          background-color: $color;
-          border-color: $color;
-          color: #fff;
-        }
+        color: #fff;
       }
     }
+  }
+
+  .SocialMediaShareButton--facebook {
+    .myShareCountWrapper {
+      font-size: 0.7em;
+    }
+  }
 }
 

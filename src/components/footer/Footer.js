@@ -34,13 +34,6 @@ const Footer = (props) => {
             }}
             tags={["social"]}
           />
-
-          <div className={styles.twitter}>
-            TWITTER
-          </div>
-          <div className={styles.facebook}>
-            FACEBOOK
-          </div>
         </div>
       </div>
       <div className={styles.footNote}>
