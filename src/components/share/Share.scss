@@ -5,14 +5,14 @@ $brand-colors: (
 );
 
 .post-social {
-  .button {
     margin: 0.5rem 0.25rem;
-    outline: 1px solid red;
-    // transition: all 300ms ease-out;
+
     @each $class, $color in $brand-colors {
-      &.#{$class} {
+      .SocialMediaShareButton--#{$class} {
+        transition: all 300ms ease-out;
         color: $color;
         border-color: $color;
+
         &:hover {
           background-color: $color;
           border-color: $color;
@@ -20,5 +20,5 @@ $brand-colors: (
         }
       }
     }
-  }
 }
+
