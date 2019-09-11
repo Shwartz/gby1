@@ -19,7 +19,7 @@ const Share = ({ socialConfig, tags }) => {
     <FacebookShareCount url='https://migraine-detective.com'>
       {shareCount => {
         return (
-          <span className="myShareCountWrapper">{shareCount}</span>
+          <span className="myShareCountWrapper">{shareCount ? shareCount : null}</span>
         )
       }}
     </FacebookShareCount>
@@ -52,17 +52,17 @@ export default Share
 * INFO: https://swas.io/blog/social-share-button-for-gatsby-blog-pages/
 *
 * react-share module changes in file: FacebookShareCount.js (node_modules)
-*
-* import jsonp from 'jsonp';
+
+import jsonp from 'jsonp';
 
 import shareCountFactory from './utils/shareCountFactory';
 
 function getFacebookShareCount(shareUrl, callback) {
-  //var endpoint = 'https://graph.facebook.com/?id=' + shareUrl;
-  var endpoint = 'https://graph.facebook.com/v2.2/?id=' + shareUrl + '&fields=og_object{engagement}';
+  // var endpoint = 'https://graph.facebook.com/?id=' + shareUrl;
+  var endpoint = 'https://graph.facebook.com/?id=' + shareUrl + '&fields=og_object{engagement}';
 
   jsonp(endpoint, function (err, data) {
-     callback(!err && data && data.share && data.share.share_count ? data.share.share_count : undefined);
+     // callback(!err && data && data.share && data.share.share_count ? data.share.share_count : undefined);
      callback(!err && data && data.og_object && data.og_object.engagement && data.og_object.engagement.count
                 ? data.og_object.engagement.count
                 : undefined
@@ -71,4 +71,5 @@ function getFacebookShareCount(shareUrl, callback) {
 }
 
 export default shareCountFactory(getFacebookShareCount);
+
 * */
