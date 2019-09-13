@@ -7,6 +7,9 @@ import Share from "../share/Share"
 const Footer = (props) => {
   const twitterHandle = "@migdetective"
   const title = "this is title"
+  const {shareConfig} = props;
+  console.log('props Footer shareConfig; ', shareConfig);
+
 
   return (
     <section className={styles.wrap}>
@@ -25,14 +28,7 @@ const Footer = (props) => {
           <h3>Social</h3>
 
           <Share
-            socialConfig={{
-              twitterHandle,
-              config: {
-                url: `https://migraine-detective.com`,
-                title,
-              },
-            }}
-            tags={["social"]}
+            socialConfig={shareConfig}
           />
         </div>
       </div>

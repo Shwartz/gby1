@@ -15,6 +15,7 @@ module.exports = {
     title: "Migraine Detective",
     twitterHandle: '@migdetective',
     url: 'https://migraine-detective.com',
+    tags: ['migraine', 'diary', 'headache'],
   },
   pathPrefix:   `/gby1`,
   plugins:      [

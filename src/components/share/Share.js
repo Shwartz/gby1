@@ -6,14 +6,14 @@ import {
   TwitterShareButton,
   FacebookShareCount,
   FacebookIcon,
-  TwitterIcon
+  TwitterIcon,
 } from "react-share"
 
 import "./Share.scss"
 
-const Share = ({ socialConfig, tags }) => {
-  console.log("socialConfig: ", socialConfig)
-  console.log("tags: ", tags)
+const Share = ({ socialConfig }) => {
+  const {title, url, hashTags, twitterHandle} = socialConfig;
+  console.log("--- SHARE: socialConfig: ", title, url, hashTags, twitterHandle)
 
   const fbShareCount = (
     <FacebookShareCount url='https://migraine-detective.com'>
@@ -23,21 +23,28 @@ const Share = ({ socialConfig, tags }) => {
         )
       }}
     </FacebookShareCount>
-  );
+  )
 
   return (
     <div className="post-social">
-      <FacebookShareButton url="https://migraine-detective.com">
-        <FacebookIcon size={32} round={true}/>
+      <FacebookShareButton
+        quote={title}
+        url={url}
+        hashtags={hashTags}
+      >
+        <FacebookIcon
+          size={32}
+          round={true}
+        />
         <div className="SocialMediaShareTitle">Facebook</div>
         {fbShareCount}
       </FacebookShareButton>
 
       <TwitterShareButton
-        title="The digital diary which helps to find triggers for your migraine"
-        url="https://migraine-detective.com"
-        via={socialConfig.twitterHandle.split('@').join('')}
-        hashtags={['migraine', 'diary', 'headache']}
+        title={title}
+        url={url}
+        via={socialConfig.twitterHandle.split("@").join("")}
+        hashtags={hashTags}
       >
         <TwitterIcon size={32} round={true}/>
         <div className="SocialMediaShareTitle">Twitter</div>
@@ -49,7 +56,9 @@ const Share = ({ socialConfig, tags }) => {
 export default Share
 
 /*
-* INFO: https://swas.io/blog/social-share-button-for-gatsby-blog-pages/
+* INFO:
+https://swas.io/blog/social-share-button-for-gatsby-blog-pages/
+https://www.npmjs.com/package/react-share
 *
 * react-share module changes in file: FacebookShareCount.js (node_modules)
 
