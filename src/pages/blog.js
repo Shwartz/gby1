@@ -7,6 +7,13 @@ import Footer from "../components/footer/Footer"
 import { HeaderMetaData } from "../helpers/HeaderMetaData"
 
 export default ({ data }) => {
+  const shareConfig = {
+    title:         "Migraine Detective blog posts",
+    url:           "https://migraine-detective.com/blog",
+    hashTags:      ["migraine", "diary", "headache", "blog"],
+    twitterHandle: data.site.siteMetadata.twitterHandle,
+  }
+
   return (
     <Container>
       <HeaderMetaData
@@ -40,7 +47,9 @@ export default ({ data }) => {
           ))}
         </div>
       </section>
-      <Footer/>
+      <Footer
+        shareConfig={shareConfig}
+      />
     </Container>
   )
 }
@@ -49,7 +58,7 @@ export const query = graphql`
   query {
     site {
       siteMetadata {
-        title
+        twitterHandle
       }
     }
     imgLogo: file(relativePath: { eq: "icons/Logo.png" }) {    

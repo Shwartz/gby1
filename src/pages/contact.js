@@ -7,37 +7,44 @@ import Footer from "../components/footer/Footer"
 import ContactForm from "../components/contactForm/ContactForm"
 import { HeaderMetaData } from "../helpers/HeaderMetaData"
 
-export default class Contact extends React.Component {
+export default ({ data }) => {
 
-  render() {
-    return (
-      <Container>
-        <HeaderMetaData
-          title="Migraine Detective | Digital headache diary"
-          description="Migraine Detective is a digital headache diary that helps to find your migraine triggers."
-          link="https://migraine-detective.com"
-        />
-        <Header
-          logo={this.props.data.imgLogo}
-        />
-        <section className={styles.page}>
-          <div className={styles.textWrap}>
-            <ContactForm
-              theme="dark"
-            />
-          </div>
-        </section>
-        <Footer/>
-      </Container>
-    )
+  const shareConfig = {
+    title:         "Migraine Detective Team",
+    url:           "https://migraine-detective.com/contact",
+    hashTags:      ["migraine", "diary", "headache"],
+    twitterHandle: data.site.siteMetadata.twitterHandle,
   }
+
+  return (
+    <Container>
+      <HeaderMetaData
+        title="Migraine Detective | Digital headache diary"
+        description="Migraine Detective is a digital headache diary that helps to find your migraine triggers."
+        link="https://migraine-detective.com"
+      />
+      <Header
+        logo={data.imgLogo}
+      />
+      <section className={styles.page}>
+        <div className={styles.textWrap}>
+          <ContactForm
+            theme="dark"
+          />
+        </div>
+      </section>
+      <Footer
+        shareConfig={shareConfig}
+      />
+    </Container>
+  )
 };
 
 export const query = graphql`
   query {
     site {
       siteMetadata {
-        title
+        twitterHandle
       }
     }
     imgLogo: file(relativePath: { eq: "icons/Logo.png" }) {    
