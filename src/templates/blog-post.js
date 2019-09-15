@@ -7,6 +7,13 @@ import styles from "../styles/global.module.scss"
 import Footer from "../components/footer/Footer"
 
 export default ({ data }) => {
+  const shareConfig = {
+    title:         data.mdx.frontmatter.title,
+    url:           `https://migraine-detective.com${data.mdx.fields.slug}`,
+    hashTags:      ["migraine", "diary", "headache", "blog"],
+    twitterHandle: data.site.siteMetadata.twitterHandle,
+  }
+
   const post = data.mdx
   return (
     <Container>
@@ -28,7 +35,9 @@ export default ({ data }) => {
           <MDXRenderer>{post.body}</MDXRenderer>
         </div>
       </section>
-      <Footer/>
+      <Footer
+        shareConfig={shareConfig}
+      />
     </Container>
   )
 }
@@ -39,7 +48,15 @@ export const query = graphql`
       frontmatter {
         title
       }
+      fields {
+        slug
+      }
       body  
+    }   
+    site {
+      siteMetadata {       
+        twitterHandle
+      }
     }
     imgLogo: file(relativePath: { eq: "icons/Logo.png" }) {    
       childImageSharp {

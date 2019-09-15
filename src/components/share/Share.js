@@ -13,8 +13,6 @@ import "./Share.scss"
 
 const Share = ({ socialConfig }) => {
   const {title, url, hashTags, twitterHandle} = socialConfig;
-  console.log("--- SHARE: socialConfig: ", title, url, hashTags, twitterHandle)
-
   const fbShareCount = (
     <FacebookShareCount url='https://migraine-detective.com'>
       {shareCount => {
@@ -57,6 +55,8 @@ export default Share
 
 /*
 * INFO:
+* I change API in node_module, probably this should be moved into our solution
+Some ideas:
 https://swas.io/blog/social-share-button-for-gatsby-blog-pages/
 https://www.npmjs.com/package/react-share
 *

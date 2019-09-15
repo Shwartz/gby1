@@ -5,11 +5,7 @@ import ContactForm from "../contactForm/ContactForm"
 import Share from "../share/Share"
 
 const Footer = (props) => {
-  const twitterHandle = "@migdetective"
-  const title = "this is title"
   const {shareConfig} = props;
-  console.log('props Footer shareConfig; ', shareConfig);
-
 
   return (
     <section className={styles.wrap}>
