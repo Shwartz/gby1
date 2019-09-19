@@ -1,12 +1,30 @@
+@import "../styles/variables";
+
 .excerpt {
   display: block;
   margin-top: 12px;
-  padding: 8px;
-  border: 1px solid grey;
   background: white;
-  transition: box-shadow 0.3s ease-in-out;
 
-  &:hover {
-    box-shadow: 0 0 4px 1px grey;
+  text-decoration: none;
+
+  &:hover h3 {
+    text-decoration: underline;
+  }
+
+  h3 {
+    margin-top: 1em;
+    color: $linkBlue;
+  }
+
+  &:not(:first-of-type) h3 {
+      margin-top: 48px;
+  }
+
+  p {
+    color: $darkBlue;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 1em;
+    margin-top: 4px;
   }
 }

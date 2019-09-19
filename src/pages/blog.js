@@ -3,6 +3,7 @@ import { Header } from "../components/header/Header"
 import { Container } from "../templates/container/Container"
 import { Link, graphql } from "gatsby"
 import styles from "../styles/global.module.scss"
+import blogStyles from "./blog.module.scss"
 import Footer from "../components/footer/Footer"
 import { HeaderMetaData } from "../helpers/HeaderMetaData"
 
@@ -27,23 +28,22 @@ export default ({ data }) => {
       <section className={styles.page}>
         <div className={styles.textWrap}>
           <h1>Blog</h1>
-          <p>Total amount of articles <b>{data.allMdx.totalCount}</b></p>
+          {/*<p>Total amount of articles <b>{data.allMdx.totalCount}</b></p>*/}
 
           {data.allMdx.edges.map(({ node }) => (
-            <div key={node.id}>
-              <Link
-                to={node.fields.slug}
-                className={styles.excerpt}
-              >
-                <h3>
-                  {node.frontmatter.title}{" "}
-                  <span>
+            <Link
+              to={node.fields.slug}
+              className={blogStyles.excerpt}
+              key={node.id}
+            >
+              <h3>
+                {node.frontmatter.title}{" "}
+                {/*<span>
                   — {node.frontmatter.date}
-                </span>
-                </h3>
-                <p>{node.excerpt}</p>
-              </Link>
-            </div>
+                </span>*/}
+              </h3>
+              <p>{node.excerpt}</p>
+            </Link>
           ))}
         </div>
       </section>

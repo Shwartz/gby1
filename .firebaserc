@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "migraine-detective-static"
+    "default": "migraine-detective-static",
+    "prod": "migraine-detective-static",
+    "stage": "gby1-ea871"
   }
 }
