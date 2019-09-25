@@ -3,6 +3,7 @@
   width: 335px;
   height: 657px;
   margin: 36px auto 0;
+  z-index: 2
 }
 
 .wrap {
@@ -26,12 +27,6 @@
 
   &.hide {
     display: none;
-  }
-}
-
-@media (max-width: 640px) {
-  .phone {
-    z-index: 2;
   }
 }
 
