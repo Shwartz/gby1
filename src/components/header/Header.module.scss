@@ -1,7 +1,14 @@
 @import "../../styles/variables";
 
 .header {
+  position: fixed;
+  width: 100%;
   background: $darkBlue;
+  z-index: 10;
+
+  & + * {
+    padding-top: 71px;
+  }
 }
 
 .headerWrap {
@@ -37,6 +44,12 @@
 }
 
 @media (max-width: 640px) {
+  .header {
+    & + * {
+      padding-top: 124px;
+    }
+  }
+
   .headerWrap {
     flex-direction: column;
     align-items: center;
