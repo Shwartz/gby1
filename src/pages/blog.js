@@ -13,7 +13,7 @@ export default ({ data }) => {
     url:           "https://migraine-detective.com/blog",
     hashTags:      ["migraine", "diary", "headache", "blog"],
     twitterHandle: data.site.siteMetadata.twitterHandle,
-  }
+  };
 
   return (
     <Container>
