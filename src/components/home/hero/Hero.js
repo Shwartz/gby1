@@ -5,43 +5,19 @@ import {Slideshow} from '../../slideshow/Slideshow';
 import {ParallaxProvider, Parallax} from 'react-scroll-parallax';
 
 const ParallaxImage1 = () => (
-    <Parallax className={styles.parallaxImg1} y={[-350, 150]} tagOuter="figure">
-        <svg width="100px" height="103px" viewBox="0 0 100 103" version="1.1" xmlns="http://www.w3.org/2000/svg"
-             xmlnsXlink="http://www.w3.org/1999/xlink">
+    /* Square */
+    <Parallax className={styles.parallaxImg1} y={[-50, 50]} tagOuter="figure">
+        <svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                <polygon id="Path-2" fill="#CECB05"
-                         points="-0.01953125 42.7601895 21.333926 42.7601895 37.2986184 77.0474793 77.2593877 0.09765625 99.9804688 0.09765625 49.9804688 102.097656 21.333926 102.097656"/>
+                <rect id="Rectangle" fill="#003D62" x="0" y="0" width="44" height="44"/>
             </g>
         </svg>
     </Parallax>
 );
 
 const ParallaxImage2 = () => (
-    <Parallax className={styles.parallaxImg2} y={[-450, 450]} tagOuter="figure">
-        <svg width="50px" height="53px" viewBox="0 0 100 103" version="1.1" xmlns="http://www.w3.org/2000/svg"
-             xmlnsXlink="http://www.w3.org/1999/xlink">
-            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                <polygon id="Path-2" fill="#CECB05"
-                         points="-0.01953125 42.7601895 21.333926 42.7601895 37.2986184 77.0474793 77.2593877 0.09765625 99.9804688 0.09765625 49.9804688 102.097656 21.333926 102.097656"/>
-            </g>
-        </svg>
-    </Parallax>
-);
-
-const ParallaxImage3 = () => (
-    <Parallax className={styles.parallaxImg3} y={[-50, 50]} tagOuter="figure">
-        <svg width="164px" height="253px" viewBox="0 0 164 253" version="1.1" xmlns="http://www.w3.org/2000/svg"
-             xmlnsXlink="http://www.w3.org/1999/xlink">
-            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                <polygon id="Path-3" fill="#38C0B8"
-                         points="0 0 86.9804688 126.5 0 253 73.9310509 253 163.741095 126.5 86.9804688 0"/>
-            </g>
-        </svg>
-    </Parallax>
-);
-
-const ParallaxImage4 = () => (
-    <Parallax className={styles.parallaxImg4} y={[-450, 150]} tagOuter="figure">
+    /* Cross */
+    <Parallax className={styles.parallaxImg2} y={[-100, 100]} tagOuter="figure">
         <svg width="133px" height="136px" viewBox="0 0 133 136" version="1.1" xmlns="http://www.w3.org/2000/svg"
              xmlnsXlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -52,25 +28,78 @@ const ParallaxImage4 = () => (
     </Parallax>
 );
 
-const ParallaxImage5 = () => (
-    <Parallax className={styles.parallaxImg5} y={[-50, 50]} tagOuter="figure">
-        <svg width="40px" height="40px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg"
-             xmlnsXlink="http://www.w3.org/1999/xlink">
+const ParallaxImage3 = () => (
+    /* Red cross */
+    <Parallax className={styles.parallaxImg3} y={[-150, 150]} tagOuter="figure">
+        <svg width="64px" height="64px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                <polygon id="Path-5" fill="#AB3161"
-                         points="0 0 26.4411172 0 40.9573489 24.6145403 54.3237895 0 80 0 52.326066 39.6111986 80 80 54.3237895 80 40 56.8279828 26.4411172 80 0 80 26.4411172 40"/>
+                <path d="M46,-4 L46,26 L76,26 L76,46 L46,46 L46,76 L26,76 L26,46 L-4,46 L-4,26 L26,26 L26,-4 L46,-4 Z" id="Combined-Shape" fill="#A12B56" transform="translate(36.000000, 36.000000) rotate(45.000000) translate(-36.000000, -36.000000) "/>
+            </g>
+        </svg>
+    </Parallax>
+);
+
+const ParallaxImage4 = () => (
+    /* Red cross */
+    <Parallax className={styles.parallaxImg4} y={[-50, 50]} tagOuter="figure">
+        <svg width="85px" height="60px" viewBox="0 0 85 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <path d="M18,52.9655172 L18,39.4482759 L53.4827586,39.4482759 L53.4827586,-18 L67,-18 L67,52.9655172 L53.4827586,52.9655172 L18,52.9655172 Z" id="Combined-Shape" fill="#CDC64F" transform="translate(42.500000, 17.482759) rotate(45.000000) translate(-42.500000, -17.482759) "/>
+            </g>
+        </svg>
+    </Parallax>
+);
+
+const ParallaxImage5 = () => (
+    /* Red cross */
+    <Parallax className={styles.parallaxImg5} y={[-50, 50]} tagOuter="figure">
+        <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <rect id="Rectangle-Copy" fill="#003D62" x="0" y="0" width="22" height="22"/>
             </g>
         </svg>
     </Parallax>
 );
 
 const ParallaxImage6 = () => (
+    /* little square */
     <Parallax className={styles.parallaxImg6} y={[-50, 50]} tagOuter="figure">
-        <svg width="40px" height="40px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg"
-             xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                <polygon id="Path-5" fill="#AB3161"
-                         points="0 0 26.4411172 0 40.9573489 24.6145403 54.3237895 0 80 0 52.326066 39.6111986 80 80 54.3237895 80 40 56.8279828 26.4411172 80 0 80 26.4411172 40"/>
+                <rect id="Rectangle-Copy" fill="#003D62" x="0" y="0" width="22" height="22"/>
+            </g>
+        </svg>
+    </Parallax>
+);
+
+const ParallaxImage7 = () => (
+    /* little square */
+    <Parallax className={styles.parallaxImg7} y={[-50, 50]} tagOuter="figure">
+        <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <rect id="Rectangle-Copy" fill="#003D62" x="0" y="0" width="22" height="22"/>
+            </g>
+        </svg>
+    </Parallax>
+);
+
+const ParallaxImage8 = () => (
+    /* Red cross */
+    <Parallax className={styles.parallaxImg8} y={[-100, 100]} tagOuter="figure">
+        <svg width="164px" height="300px" viewBox="0 0 164 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <polygon id="Path" fill="#38C0B8" points="0 0 81.6771831 150 0 300 66.6385133 300 163.354366 150 66.6385133 0"/>
+            </g>
+        </svg>
+    </Parallax>
+);
+
+const ParallaxImage9 = () => (
+    /* Red cross */
+    <Parallax className={styles.parallaxImg9} y={[-150, 150]} tagOuter="figure">
+        <svg width="64px" height="64px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <path d="M46,-4 L46,26 L76,26 L76,46 L46,46 L46,76 L26,76 L26,46 L-4,46 L-4,26 L26,26 L26,-4 L46,-4 Z" id="Combined-Shape" fill="#A12B56" transform="translate(36.000000, 36.000000) rotate(45.000000) translate(-36.000000, -36.000000) "/>
             </g>
         </svg>
     </Parallax>
@@ -85,6 +114,9 @@ export const Hero = (props) => (
             <ParallaxImage4/>
             <ParallaxImage5/>
             <ParallaxImage6/>
+            <ParallaxImage7/>
+            <ParallaxImage8/>
+            <ParallaxImage9/>
             <div className={styles.heroWrap}>
                 <h1>Migraine Detective is a digital headache diary that helps to find your migraine triggers.</h1>
                 <WhiteBlueButton
