@@ -27,6 +27,6 @@ const mainMenu = (arr) => {
 export const Navigation = () => (
     <nav className={styles.menu}>
         {mainMenu(mainMenuDefinition)}
-        <a href="https://www.migraine-detective.com/open-diary">Go to Diary</a>
+        <a href="https://www.migraine-detective.com/open-diary" className={styles.diary}>Go to Diary »</a>
     </nav>
 );

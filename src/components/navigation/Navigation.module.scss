@@ -25,6 +25,16 @@
       color: $fontYellow;
     }
   }
+
+  .diary {
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 690px) {
+  .menu .diary {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 640px) {
