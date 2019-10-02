@@ -17,6 +17,7 @@
     text-align: center;
     letter-spacing: 0.06em;
     font-weight: 600;
+    margin-top: 32px;
   }
 }
 
@@ -92,5 +93,12 @@
   .parallaxImg5,
   .parallaxImg6 {
     display: none;
+  }
+}
+
+@media (max-width: $miniTablet) {
+  .hero h1 {
+    font-size: 40px;
+    margin-top: 24px;
   }
 }
