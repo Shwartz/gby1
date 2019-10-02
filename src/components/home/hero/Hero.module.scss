@@ -80,7 +80,7 @@
   left: calc(50% + 96px);
 }
 
-@media (max-width: 640px) {
+@media (max-width: $miniTablet) {
   .hero {
     margin-bottom: -300px;
   }
