@@ -11,13 +11,16 @@ import {
 
 import './Share.scss';
 
+const presetFBValue = 153;
+
 const Share = ({socialConfig}) => {
-    const {title, url, hashTags, twitterHandle} = socialConfig;
-    const fbShareCount                          = (
+    const {title, url, hashTags} = socialConfig;
+    const fbShareCount           = (
         <FacebookShareCount url='https://migraine-detective.com'>
             {shareCount => {
+                console.log(shareCount, presetFBValue);
                 return (
-                    <span className="myShareCountWrapper">{shareCount ? shareCount : null}</span>
+                    <span className="myShareCountWrapper">{shareCount ? shareCount : presetFBValue}</span>
                 );
             }}
         </FacebookShareCount>
