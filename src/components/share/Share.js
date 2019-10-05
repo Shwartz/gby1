@@ -17,12 +17,7 @@ const Share = ({socialConfig}) => {
     const {title, url, hashTags} = socialConfig;
     const fbShareCount           = (
         <FacebookShareCount url='https://migraine-detective.com'>
-            {shareCount => {
-                console.log(shareCount, presetFBValue);
-                return (
-                    <span className="myShareCountWrapper">{shareCount ? shareCount : presetFBValue}</span>
-                );
-            }}
+            {shareCount => <span className="myShareCountWrapper">{shareCount ? shareCount : presetFBValue}</span>}
         </FacebookShareCount>
     );
 
