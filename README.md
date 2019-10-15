@@ -24,6 +24,7 @@ Use npm !!!
 
     - To add SCSS module support https://www.gatsbyjs.org/packages/gatsby-plugin-sass/
     - If need specific path, add changes to gatsby-config.js and first do  
+    -- prefix was used for demo.shvarcs.com placeholder.   
     `gatsby clean`    
     `gatsby build --prefix-paths`
     - gatsby-browser.js - define global css by importing them from `/styles/global.css`

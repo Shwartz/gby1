@@ -5,7 +5,7 @@ import styles from './Navigation.module.scss';
 const mainMenuDefinition = [
     {'About': '/about'},
     {'Blog': '/blog'},
-    {'Contact us': '/contact'},
+    /*{'Contact us': '/contact'},*/
 ];
 
 const mainMenu = (arr) => {
