@@ -7,13 +7,8 @@
 
   text-decoration: none;
 
-  &:hover h3 {
+  &:hover h2 {
     text-decoration: underline;
-  }
-
-  h3 {
-    margin-top: 1em;
-    color: $linkBlue;
   }
 
   &:not(:first-of-type) h3 {
@@ -21,9 +16,12 @@
   }
 
   p {
-    color: $linkBlueOpacity;
-    text-decoration: none;
-    font-size: 1em;
-    margin-top: 8px;
+    font-size: 1.2em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin: 1em 0 0;
+    color: $darkBlue;
   }
 }
